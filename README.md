@@ -1,1 +1,25 @@
-# CovCoagBackgroundIncidence
+CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
+========================================================================================================================================================
+
+<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
+
+## Running the analysis
+1) Download this entire repository (you can download as a zip folder using Code -> Download ZIP, or you can use GitHub Desktop). 
+2) Open the project <i>CovCoagBackgroundIncidence.Rproj</i> in RStudio (when inside the project, you will see its name on the top-right of your RStudio session)
+3) Open the <i>CodeToRun.R</i> file which should be the only file that you need to interact with< ul>
+<li> Run <i>renv::activate()</i> and <i>renv::restore()</i> to bring in the required packages to be used</li> 
+<li> Next, <ul>
+<li> <i>outputFolder <- "...."</i>: the path to a folder (that exists) where the results from this analysis will be saved</li> 
+<li> <i>connectionDetails <- createConnectionDetails(".........")</i>: These are the connection details for the 
+<a href="http://ohdsi.github.io/DatabaseConnector">OHDSI DatabaseConnector</a> package.Note, this is v4.0.0 of DatabaseConnector and so you will need to have downloaded the relevant drivers (see <a href="http://ohdsi.github.io/DatabaseConnector/articles/UsingDatabaseConnector.html">here</a> for more details) and pass the <i>pathToDriver</i> argument to the <i>createConnectionDetails</i> command.</li>
+  <li>targetDialect <-".....": This is your sql dialect used with the OHDSI <a href="https://ohdsi.github.io/SqlRender/articles/UsingSqlRender.html">SqlRender</a> package</li> 
+<li><i>cdm_database_schema <-"....."</i>: This is the name of the schema that contains the OMOP CDM with patient-level data </li> 
+<li><i>results_database_schema <-"....."</i>: This is the name of the schema where a results table will be created </li> 
+<li><i>cohortDatabaseSchema <-"....."</i>: This is the name of the schema where a results table will be created </li>
+<li><i>cohortTable   <- "diagCovCoagOutcomesCohorts"</i>: This is the name of the table that was created when running the <a href="https://github.com/oxford-pharmacoepi/CovCoagOutcomeDiagnostics">CovCoagOutcomeDiagnostics</a>. If you no longer have this table in your results schema, please re-run that package specifying only createCohorts = TRUE in the diagCovCoagOutcomes::runCohortDiagnostics, with all other options set to FALSE. </li> 
+<li><i> path.outcomes.diag<-""</i>: # the path to the folder that contains the CovCoagOutcomeDiagnostics package (i.e the folder that contains diagCovCoagOutcomes.Rproj). </li>  
+<li>db <- dbConnect("........."): This is a connection to your database with the <a href="https://rdrr.io/cran/DBI/man/dbConnect.html">DBI</a> package</li>  
+<li><i>db.name <-"....."</i>: This is the short name/ acronym for your database</li>  
+<li><i>test.run<-FALSE</i>: If you want to to quckly (well, relatively) check that the package works, set this to TRUE and the code will run for one exposure population, one baseline commorbidity, one baseline medication, and one outcome of interest. If that works, then change back to TRUE and re-run for the full analysis/li>  
+  
+  
