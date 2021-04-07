@@ -19,6 +19,6 @@ CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
 <li><i> path.outcomes.diag<-""</i>: # the path to the folder that contains the CovCoagOutcomeDiagnostics package (i.e the folder that contains diagCovCoagOutcomes.Rproj). </li>  
 <li>db <- dbConnect("........."): This is a connection to your database with the <a href="https://rdrr.io/cran/DBI/man/dbConnect.html">DBI</a> package</li>  
 <li><i>db.name <-"....."</i>: This is the short name/ acronym for your database</li>  
-<li><i>test.run<-FALSE</i>: If you want to to quckly (well, relatively) check that the package works, set this to TRUE and the code will run for one exposure population, one baseline commorbidity, one baseline medication, and one outcome of interest. If that works, then change back to TRUE and re-run for the full analysis/li>  
+<li><i>test.run<-FALSE</i>: If you want to to quckly (well, relatively) check that the package works, set this to TRUE and the code will run for one exposure population, one baseline commorbidity, one baseline medication, and one outcome of interest. If that works, then change back to TRUE and re-run for the full analysis</li>  
   
   
