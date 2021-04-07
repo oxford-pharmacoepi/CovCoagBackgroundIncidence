@@ -8,7 +8,6 @@ CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
 2) Open the project <i>CovCoagBackgroundIncidence.Rproj</i> in RStudio (when inside the project, you will see its name on the top-right of your RStudio session)
 3) Open the <i>CodeToRun.R</i> file which should be the only file that you need to interact with< ul>
 <li> Run <i>renv::activate()</i> and <i>renv::restore()</i> to bring in the required packages to be used</li> 
-<li> Next, <ul>
 <li> <i>outputFolder <- "...."</i>: the path to a folder (that exists) where the results from this analysis will be saved</li> 
 <li> <i>connectionDetails <- createConnectionDetails(".........")</i>: These are the connection details for the 
 <a href="http://ohdsi.github.io/DatabaseConnector">OHDSI DatabaseConnector</a> package.Note, this is v4.0.0 of DatabaseConnector and so you will need to have downloaded the relevant drivers (see <a href="http://ohdsi.github.io/DatabaseConnector/articles/UsingDatabaseConnector.html">here</a> for more details) and pass the <i>pathToDriver</i> argument to the <i>createConnectionDetails</i> command.</li>
