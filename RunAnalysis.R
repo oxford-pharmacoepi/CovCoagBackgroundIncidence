@@ -32,6 +32,7 @@ exposure.pop.defs<-c(1,2,3)
 # 1 from start of calendar year
 # 2 from visit
 # 3 from visit, with TAR censored at 28 days post visit
+exposure.pop.defs<-c(1) # for now just the primary cohort of interest
 
 # prior.hist.req<-c(1,2)
 # 1 no restriction
@@ -113,8 +114,12 @@ if(test.run==TRUE){
   drug.codes<-drug.codes[1]
   drug.names<-drug.names[1]
 }   
-    
-    
+   
+# for now just for one drug and condition anyway
+  cond.codes<-cond.codes[1]
+  cond.names<-cond.names[1]
+  drug.codes<-drug.codes[1]
+  drug.names<-drug.names[1]   
     
     
 # run ----
