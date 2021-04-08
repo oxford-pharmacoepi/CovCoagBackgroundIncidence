@@ -20,9 +20,7 @@ concept_ancestor_db<-tbl(db, sql(paste0("SELECT * FROM ",
                        cdm_database_schema,
                        ".concept_ancestor")))
 
-outcome_db<-tbl(db, sql(paste0("SELECT * FROM ",
-                       results_database_schema,
-                       ".", cohortTable)))
+
 
 # specifications ----
 years.of.interest<-c("all")
@@ -39,21 +37,6 @@ exposure.pop.defs<-c(1) # for now just the primary cohort of interest
 # 2 prior year required
 prior.hist.req<-1 # for now, just run for the former
 
-outcomes.of.interest<-outcome_db %>% 
-  select(cohort_definition_id) %>% 
-  distinct() %>% 
-  pull()
-# all those instantiated from outcome diagnostics
-# outcomes.of.interest<-outcomes.of.interest[outcomes.of.interest %in%
- #                                             c("586", "588", "591", "592", "590")]
-# for now, these are the specific cohorts of interest so will just run for these
-
-CohortsToCreate<-readr::read_csv(paste0(path.outcomes.diag, "/inst/settings/CohortsToCreate.csv"))
-CohortsToCreate<-CohortsToCreate %>% 
- dplyr::mutate(name=stringr::str_replace_all(name, "\\[|\\]", "")) %>% 
-    dplyr::mutate(name=stringr::str_replace(name, "EB", "")) %>% 
-    dplyr::mutate(name=stringr::str_replace(name, " CovCoag ", ""))
-# bring in the details of the cohorts from the diagnostics package
 
 
 cond.codes<-c("434621", 
@@ -122,6 +105,83 @@ if(test.run==TRUE){
   drug.names<-drug.names[1]   
     
     
+  
+# instantiate outcome tables -----
+print(paste0("- Getting outcomes"))
+ 
+  
+CohortsToCreate<-readr::read_csv(here("OutcomeCohorts","settings", "CohortsToCreate.csv"))
+CohortsToCreate<-CohortsToCreate %>% 
+ dplyr::mutate(name=stringr::str_replace_all(name, "\\[|\\]", "")) %>% 
+    dplyr::mutate(name=stringr::str_replace(name, "EB", "")) %>% 
+    dplyr::mutate(name=stringr::str_replace(name, " CovCoag ", ""))
+# bring in the details of the cohorts from the diagnostics package  
+  
+   
+conn <- connect(connectionDetails)
+# create empty cohorts table
+print(paste0("Create empty cohort table")) 
+sql<-readSql(here("OutcomeCohorts", "sql","CreateCohortTable.sql"))
+sql<-SqlRender::translate(sql, targetDialect = targetDialect)
+renderTranslateExecuteSql(conn=conn, 
+                          sql,
+                          cohort_database_schema =  results_database_schema,
+                          cohort_table = cohortTableOutcomes)
+rm(sql)
+
+cohort.sql<-list.files(here("OutcomeCohorts", "sql"))
+cohort.sql<-cohort.sql[cohort.sql!="CreateCohortTable.sql"]
+
+if(test.run==TRUE){
+  cohort.sql<-cohort.sql[cohort.sql=="[EB] CovCoag DVT broad.sql"]
+  # this should be a cohort that everywhere has
+}
+
+
+for(cohort.i in 1:length(cohort.sql)){
+  
+  working.id<- CohortsToCreate %>% 
+    filter(atlasName == str_replace(cohort.sql[cohort.i], ".sql", "")) %>% 
+    select(cohortId) %>% 
+    pull()
+  
+  print(paste0("- Getting outcome: ", str_replace(cohort.sql[cohort.i], ".sql", ""),
+              " (", cohort.i, " of ", length(cohort.sql), ")"))
+  sql<-readSql(here("OutcomeCohorts", "sql",cohort.sql[cohort.i])) 
+  sql<-SqlRender::translate(sql, targetDialect = targetDialect)
+  renderTranslateExecuteSql(conn=conn, 
+                          sql, 
+                          cdm_database_schema = cdm_database_schema,
+                          vocabulary_database_schema = cdm_database_schema,
+                          target_database_schema = results_database_schema,
+                          results_database_schema = results_database_schema,
+                          target_cohort_table = cohortTableOutcomes,
+                          target_cohort_id = working.id)  
+  }
+disconnect(conn)
+ 
+# link 
+outcome_db<-tbl(db, sql(paste0("SELECT * FROM ",
+                       results_database_schema,
+                       ".", cohortTableOutcomes)))    
+
+outcomes.of.interest<-outcome_db %>% 
+  select(cohort_definition_id) %>% 
+  distinct() %>% 
+  pull()
+# all those instantiated from outcome diagnostics
+# outcomes.of.interest<-outcomes.of.interest[outcomes.of.interest %in%
+ #                                             c("586", "588", "591", "592", "590")]
+# for now, these are the specific cohorts of interest so will just run for these
+
+
+
+  
+
+  
+  
+  
+  
 # run ----
 # Initiate lists to store output
 Patient.characteristcis<-list()
@@ -186,7 +246,7 @@ end.date<-as.Date(dmy(paste0("31-12-","2020")))
 conn <- connect(connectionDetails)
 # create empty cohorts table
 print(paste0("Create empty cohort table")) 
-sql<-readSql(here("Cohorts", "sql","CreateCohortTable.sql"))
+sql<-readSql(here("ExposureCohorts", "sql","CreateCohortTable.sql"))
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
 renderTranslateExecuteSql(conn=conn, 
                           sql,
@@ -196,13 +256,13 @@ rm(sql)
   
 if(working.year==2017){
 if(e==1){  
-sql<-readSql(here("Cohorts", "sql","general_pop_2017.sql"))
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_2017.sql"))
 }
 if(e %in% c(2,3) & years.of.interest[i]=="all"){  
-sql<-readSql(here("Cohorts", "sql","general_pop_visit_2017_to_2020.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2017_to_2020.sql")) 
 }
 if(e %in% c(2,3) & years.of.interest[i]=="2017"){  
-sql<-readSql(here("Cohorts", "sql","general_pop_visit_2017_only.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2017_only.sql")) 
 }  
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
 renderTranslateExecuteSql(conn=conn, 
@@ -215,10 +275,10 @@ renderTranslateExecuteSql(conn=conn,
 
 if(working.year==2018){
 if(e==1){
-sql<-readSql(here("Cohorts", "sql","general_pop_2018.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_2018.sql")) 
 }
 if(e %in% c(2,3)){  
-sql<-readSql(here("Cohorts", "sql","general_pop_visit_2018_only.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2018_only.sql")) 
 }
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
 renderTranslateExecuteSql(conn=conn, 
@@ -230,10 +290,10 @@ renderTranslateExecuteSql(conn=conn,
 }  
 if(working.year==2019){
 if(e==1){
-sql<-readSql(here("Cohorts", "sql","general_pop_2019.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_2019.sql")) 
 }
 if(e %in% c(2,3)){  
-sql<-readSql(here("Cohorts", "sql","general_pop_visit_2019_only.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2019_only.sql")) 
 } 
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
 renderTranslateExecuteSql(conn=conn, 
@@ -245,10 +305,10 @@ renderTranslateExecuteSql(conn=conn,
 }  
 if(working.year==2020){
 if(e==1){
-sql<-readSql(here("Cohorts", "sql","general_pop_2020.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_2020.sql")) 
 }
 if(e %in% c(2,3)){  
-sql<-readSql(here("Cohorts", "sql","general_pop_visit_2020_only.sql")) 
+sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2020_only.sql")) 
 }
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
 renderTranslateExecuteSql(conn=conn, 
@@ -943,7 +1003,7 @@ Patient.characteristcis.for.plotting[[paste0(pop.type,"_",working.outcome.name, 
 
 if(years.of.interest[i]=="all"){
 IR.summary[[paste0(pop.type,"_","IR_overall_",working.outcome)]]<-working.Pop %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -956,7 +1016,7 @@ IR.summary[[paste0(pop.type,"_","IR_overall_",working.outcome)]]<-working.Pop %>
   mutate(pop.type=pop.type)
   } else {
 IR.summary[[paste0(pop.type,"_","IR_overall_",working.year,"_",working.outcome)]]<-working.Pop %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -974,7 +1034,7 @@ IR.summary[[paste0(pop.type,"_","IR_overall_",working.year,"_",working.outcome)]
 if(years.of.interest[i]=="all"){
 IR.summary[[paste0(pop.type,"_","IR_age_gr_gender","_",working.outcome)]]<-working.Pop %>%  
   group_by(age_gr, gender) %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -988,7 +1048,7 @@ IR.summary[[paste0(pop.type,"_","IR_age_gr_gender","_",working.outcome)]]<-worki
   } else {
 IR.summary[[paste0(pop.type,"_","IR_age_gr_gender",working.year,"_",working.outcome)]]<-working.Pop %>%  
   group_by(age_gr, gender) %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -1005,7 +1065,7 @@ IR.summary[[paste0(pop.type,"_","IR_age_gr_gender",working.year,"_",working.outc
 if(years.of.interest[i]=="all"){
 IR.summary[[paste0(pop.type,"_","IR_age_gr2_gender","_",working.outcome)]]<-working.Pop %>%  
   group_by(age_gr2, gender) %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -1019,7 +1079,7 @@ IR.summary[[paste0(pop.type,"_","IR_age_gr2_gender","_",working.outcome)]]<-work
   } else {
 IR.summary[[paste0(pop.type,"_","IR_age_gr2_gender",working.year,"_",working.outcome)]]<-working.Pop %>%  
   group_by(age_gr2, gender) %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -1036,7 +1096,7 @@ IR.summary[[paste0(pop.type,"_","IR_age_gr2_gender",working.year,"_",working.out
 if(years.of.interest[i]=="all"){
 IR.summary[[paste0(pop.type,"_","IR_age_gr_gender_history","_",working.outcome)]]<-working.Pop %>%  
   group_by(age_gr, gender,history_outcome) %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 
@@ -1050,7 +1110,7 @@ IR.summary[[paste0(pop.type,"_","IR_age_gr_gender_history","_",working.outcome)]
   } else {
 IR.summary[[paste0(pop.type,"_","IR_age_gr_gender_history",working.year,"_",working.outcome)]]<-working.Pop %>%  
   group_by(age_gr, gender,history_outcome) %>% 
-  summarise(n=nrow(working.Pop),
+  summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
             events=sum(f_u.outcome)) %>% 

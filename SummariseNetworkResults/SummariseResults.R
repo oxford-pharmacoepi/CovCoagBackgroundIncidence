@@ -9,8 +9,6 @@ db.names<-output.files[str_detect(output.files, "IR.summary")]
 db.names<-str_replace(db.names, "IR.summary_","")
 db.names<-str_replace(db.names, ".RData","")
 
-db.names<-db.names[db.names %in% c("TEST_SIDIAP", "SIDIAP", "SIDIAP_h")]# for now just sidiap
-
 Network.patient.characteristcis<-list()
 for(i in 1:length(db.names)){
  load(paste0(output.folder,"/Patient.characteristcis_", db.names[i], ".RData"))
