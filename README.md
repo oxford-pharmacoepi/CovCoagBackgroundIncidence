@@ -15,7 +15,7 @@ CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
 <li><i>cdm_database_schema <-"....."</i>: This is the name of the schema that contains the OMOP CDM with patient-level data </li> 
 <li><i>results_database_schema <-"....."</i>: This is the name of the schema where a results table will be created </li> 
 <li><i>cohortDatabaseSchema <-"....."</i>: This is the name of the schema where a results table will be created </li>
-<li><i>cohortTableExposures<-"diagCovCoagIncExposures", cohortTableOutcomes <-"diagCovCoagIncOutcomes", cohortTableProfiles<-"diagCovCoagIncProfiles":  These are the tables to be created in your results schema for this analysis. Note, any existing tables in your results schema with the same name will be overwritten</li> 
+<li><i>cohortTableExposures<-"diagCovCoagIncExposures", cohortTableOutcomes <-"diagCovCoagIncOutcomes", cohortTableProfiles<-"diagCovCoagIncProfiles"</i>:  These are the tables to be created in your results schema for this analysis. Note, any existing tables in your results schema with the same name will be overwritten</li> 
 <li>db <- dbConnect("........."): This is a connection to your database with the <a href="https://rdrr.io/cran/DBI/man/dbConnect.html">DBI</a> package</li>  
 <li><i>db.name <-"....."</i>: This is the short name/ acronym for your database</li>  
 <li><i>test.run<-FALSE</i>: If you want to to quckly (well, relatively) check that the package works, set this to TRUE and the code will run for one exposure population, one baseline commorbidity, one baseline medication, and one outcome of interest. If that works, then change back to TRUE and re-run for the full analysis</li> 
