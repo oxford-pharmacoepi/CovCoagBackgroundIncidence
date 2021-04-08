@@ -43,8 +43,8 @@ outcomes.of.interest<-outcome_db %>%
   distinct() %>% 
   pull()
 # all those instantiated from outcome diagnostics
-outcomes.of.interest<-outcomes.of.interest[outcomes.of.interest %in%
-                                             c("586", "588", "591", "592", "590")]
+# outcomes.of.interest<-outcomes.of.interest[outcomes.of.interest %in%
+ #                                             c("586", "588", "591", "592", "590")]
 # for now, these are the specific cohorts of interest so will just run for these
 
 CohortsToCreate<-readr::read_csv(paste0(path.outcomes.diag, "/inst/settings/CohortsToCreate.csv"))
