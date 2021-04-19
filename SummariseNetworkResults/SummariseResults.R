@@ -9,6 +9,8 @@ db.names<-output.files[str_detect(output.files, "IR.summary")]
 db.names<-str_replace(db.names, "IR.summary_","")
 db.names<-str_replace(db.names, ".RData","")
 
+# db.names<-db.names[db.names %in% c("TEST_SIDIAP", "SIDIAP", "SIDIAP_h")]# for now just sidiap
+
 Network.patient.characteristcis<-list()
 for(i in 1:length(db.names)){
  load(paste0(output.folder,"/Patient.characteristcis_", db.names[i], ".RData"))
@@ -65,39 +67,63 @@ for(i in 1:length(db.names)){
  }
 }
 
-# 
-# plot.data<-bind_rows(Network.patient.characteristcis.for.plotting$SIDIAP_h$Overall_age_gr_gender %>% 
-#                        mutate(group="General population"),
-#        Network.patient.characteristcis.for.plotting$SIDIAP_h$`Immune thrombocytopenia_age_gr_gender`%>% 
-#                        mutate(group="Immune thrombocytopenia"),
-#        Network.patient.characteristcis.for.plotting$SIDIAP_h$`Disseminated intravascular coagulation_age_gr_gender`%>% 
-#                        mutate(group="Disseminated intravascular coagulation"),
-#        Network.patient.characteristcis.for.plotting$SIDIAP_h$`Cerebral venous sinus thrombosis_age_gr_gender`%>% 
-#                        mutate(group="Cerebral venous sinus thrombosis"),
-#        Network.patient.characteristcis.for.plotting$SIDIAP_h$`Intracranial venous thrombosis_age_gr_gender`%>% 
-#                        mutate(group="Intracranial venous thrombosis"),
-#        Network.patient.characteristcis.for.plotting$SIDIAP_h$`Thrombotic thrombocytopenia purpura_age_gr_gender`%>% 
-#                        mutate(group="Thrombotic thrombocytopenia purpura")) %>% 
-#   mutate(db="SIDIAP") %>% 
-#   mutate(group=factor(group,
-#                       levels=c("General population",
-#                                "Cerebral venous sinus thrombosis",
-#                                "Disseminated intravascular coagulation",
-#                                "Immune thrombocytopenia",
-#                                "Intracranial venous thrombosis",
-#                                "Thrombotic thrombocytopenia purpura")))
-# 
-# gg.general.format.facet(plot.data %>% 
-#   ggplot()+
-#   geom_col(aes(age_gr,n, fill=gender),width=1,
-#            colour="black")+
-#   facet_grid(group~ db, scales = "free_y", switch="y")+
-#   theme(axis.text=element_text(size=12),
-#         axis.title=element_text(size=14,face="bold")) +
-#   theme_bw()+
-#   ylab("N")+
-#   xlab("Age")+
-#   scale_fill_manual(values=c("#F21A00", "#3B9AB2")))
+
+plot.data<-
+  bind_rows(
+  bind_rows(Network.patient.characteristcis.for.plotting$SIDIAP_H$general.pop.all_Overall_age_gr_gender %>%
+                       mutate(group="General population"),
+       Network.patient.characteristcis.for.plotting$SIDIAP_H$`general.pop.all_Immune thrombocytopenia_age_gr_gender`%>%
+                       mutate(group="Immune thrombocytopenia"),
+       Network.patient.characteristcis.for.plotting$SIDIAP_H$`general.pop.all_Disseminated intravascular coagulation_age_gr_gender`%>%
+                       mutate(group="Disseminated intravascular coagulation"),
+       Network.patient.characteristcis.for.plotting$SIDIAP_H$`general.pop.all_Cerebral venous sinus thrombosis_age_gr_gender`%>%
+                       mutate(group="Cerebral venous sinus thrombosis"),
+       Network.patient.characteristcis.for.plotting$SIDIAP_H$`general.pop.all_Intracranial venous thrombosis_age_gr_gender`%>%
+                       mutate(group="Intracranial venous thrombosis"),
+       Network.patient.characteristcis.for.plotting$SIDIAP_H$`general.pop.all_Thrombotic thrombocytopenia purpura_age_gr_gender`%>%
+                       mutate(group="Thrombotic thrombocytopenia purpura")) %>%
+  mutate(db="SIDIAP") %>%
+  mutate(group=factor(group,
+                      levels=c("General population",
+                               "Cerebral venous sinus thrombosis",
+                               "Disseminated intravascular coagulation",
+                               "Immune thrombocytopenia",
+                               "Intracranial venous thrombosis",
+                               "Thrombotic thrombocytopenia purpura"))),
+    bind_rows(Network.patient.characteristcis.for.plotting$CPRD$general.pop.all_Overall_age_gr_gender %>%
+                       mutate(group="General population"),
+       Network.patient.characteristcis.for.plotting$CPRD$`general.pop.all_Immune thrombocytopenia_age_gr_gender`%>%
+                       mutate(group="Immune thrombocytopenia"),
+       Network.patient.characteristcis.for.plotting$CPRD$`general.pop.all_Disseminated intravascular coagulation_age_gr_gender`%>%
+                       mutate(group="Disseminated intravascular coagulation"),
+       Network.patient.characteristcis.for.plotting$CPRD$`general.pop.all_Cerebral venous sinus thrombosis_age_gr_gender`%>%
+                       mutate(group="Cerebral venous sinus thrombosis"),
+       Network.patient.characteristcis.for.plotting$CPRD$`general.pop.all_Intracranial venous thrombosis_age_gr_gender`%>%
+                       mutate(group="Intracranial venous thrombosis"),
+       Network.patient.characteristcis.for.plotting$CPRD$`general.pop.all_Thrombotic thrombocytopenia purpura_age_gr_gender`%>%
+                       mutate(group="Thrombotic thrombocytopenia purpura")) %>%
+  mutate(db="CPRD") %>%
+  mutate(group=factor(group,
+                      levels=c("General population",
+                               "Cerebral venous sinus thrombosis",
+                               "Disseminated intravascular coagulation",
+                               "Immune thrombocytopenia",
+                               "Intracranial venous thrombosis",
+                               "Thrombotic thrombocytopenia purpura"))))
+
+
+
+gg.general.format.facet(plot.data %>%
+  ggplot()+
+  geom_col(aes(age_gr,n, fill=gender),width=1,
+           colour="black")+
+  facet_grid(group~ db, scales = "free_y", switch="y")+
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=14,face="bold")) +
+  theme_bw()+
+  ylab("N")+
+  xlab("Age")+
+  scale_fill_manual(values=c("#F21A00", "#3B9AB2")))
 
 
 
@@ -138,6 +164,7 @@ plot.data %>%
   filter(study.year=="all") %>% 
   ggplot(aes(outcome.name,ir_100000, colour=db, shape=pop.type)) +
   geom_point()+ 
+  facet_grid(.~ db, scales = "free_y", switch="y")+
   geom_errorbar(aes(ymin=ir_100000_lower,ymax=ir_100000_upper), width=.1)+
   coord_flip()+
   theme_bw()
@@ -150,6 +177,70 @@ plot.data %>%
 # Disseminated intravascular coagulation 
 # Immune thrombocytopenia
 # Intracranial venous thrombosis
+
+table.2<-Network.IR %>% 
+  filter(db=="CPRD") %>% 
+  filter(outcome.name %in% 
+           c("Cerebral venous sinus thrombosis",
+           "Thrombotic thrombocytopenia purpura",
+           "Disseminated intravascular coagulation",
+           "Immune thrombocytopenia",
+           "Intracranial venous thrombosis") )%>% 
+  filter(strata=="age_gr2_gender")  %>% 
+  mutate(study.year=ifelse(study.year=="all","Overall", study.year)) %>% 
+  filter(pop.type=="general.pop.all") %>% 
+  select(n,age_gr2, gender, years, events, outcome.name, db,ir_100000,ir_100000_lower,ir_100000_upper) %>% 
+  mutate(n.CPRD=paste0(nice.num.count(n))) %>% 
+  mutate(years.CPRD=paste0(nice.num.count(years))) %>% 
+  mutate(events.CPRD=paste0(nice.num.count(events))) %>% 
+  mutate(ir_100000_summ.CPRD=paste0(nice.num(ir_100000),
+                               " (", nice.num(ir_100000_lower), " to ", 
+                               nice.num(ir_100000_upper),")" )) %>% 
+  select(outcome.name, age_gr2, gender, n.CPRD, years.CPRD, events.CPRD, ir_100000_summ.CPRD) %>% 
+  full_join(
+Network.IR %>% 
+  filter(db=="SIDIAP_H") %>% 
+  filter(outcome.name %in% 
+           c("Cerebral venous sinus thrombosis",
+           "Thrombotic thrombocytopenia purpura",
+           "Disseminated intravascular coagulation",
+           "Immune thrombocytopenia",
+           "Intracranial venous thrombosis") )%>% 
+  filter(strata=="age_gr2_gender")  %>% 
+  mutate(study.year=ifelse(study.year=="all","Overall", study.year)) %>% 
+  filter(pop.type=="general.pop.all") %>% 
+  select(n,age_gr2, gender, years, events, outcome.name, db,ir_100000,ir_100000_lower,ir_100000_upper) %>% 
+  mutate(n.SIDIAP_H=paste0(nice.num.count(n))) %>% 
+  mutate(years.SIDIAP_H=paste0(nice.num.count(years))) %>% 
+  mutate(events.SIDIAP_H=paste0(nice.num.count(events))) %>% 
+  mutate(ir_100000_summ.SIDIAP_H=paste0(nice.num(ir_100000),
+                               " (", nice.num(ir_100000_lower), " to ", 
+                               nice.num(ir_100000_upper),")" )) %>% 
+  select(outcome.name, age_gr2, gender, n.SIDIAP_H, years.SIDIAP_H, events.SIDIAP_H, ir_100000_summ.SIDIAP_H))
+
+myHeader <- c(" " = 3, a = 4, b=4)
+names(myHeader) <- c(" ", "CPRD", "SIDIAP")
+
+kable(table.2,
+      col.names = c("Outcome",
+                    "Age",
+                    "Sex",
+                    "n",
+                   "PYs",
+                    "Events",
+                    "IR per 100,000 PYs",
+                    "n",
+                   "PYs",
+                    "Events",
+                    "IR per 100,000 PYs")) %>% 
+ kable_styling(bootstrap_options = c("striped", "bordered"))%>%
+ add_header_above(header = myHeader)
+
+
+SummaryPatientCharacteristics[[db.names[i]]]<-kable(table.data) %>% 
+ kable_styling(bootstrap_options = c("striped", "bordered"))%>%
+ add_header_above(header = myHeader)
+
 
 # overall, and by year
 plot.data<-Network.IR %>% 
@@ -189,7 +280,7 @@ plot.data<-Network.IR %>%
 
 gg.general.format.facet(
   plot.data %>% 
-  ggplot(aes(db,ir_100000, shape=pop.type)) +
+  ggplot(aes(db,ir_100000, shape=pop.type, colour=db)) +
   facet_grid(outcome.name~ study.year, scales = "free_y", switch="y")+
   geom_point(position=position_dodge(width=0.5) )+ 
   geom_errorbar(aes(ymin=ir_100000_lower,ymax=ir_100000_upper), width=0,
@@ -233,8 +324,7 @@ plot.data<-Network.IR %>%
            "Immune thrombocytopenia",
            "Intracranial venous thrombosis") )%>% 
   filter(strata=="age_gr2_gender") %>% 
-  filter(study.year=="all") %>% 
-  mutate(db=ifelse(db=="SIDIAP_h", "SIDIAP", db))
+  filter(study.year=="all") 
 
 gg.general.format.facet(
   plot.data %>% 
@@ -249,6 +339,35 @@ gg.general.format.facet(
     scale_color_manual(values=c("#e41a1c", "#377eb8"))
   )
 
+plot.data<-Network.IR %>% 
+  filter(outcome.name %in% 
+           c("Cerebral venous sinus thrombosis",
+           "Thrombotic thrombocytopenia purpura",
+           "Disseminated intravascular coagulation",
+           "Immune thrombocytopenia",
+           "Intracranial venous thrombosis") )%>% 
+  filter(strata %in% c("overall","age_gr2_gender")) %>% 
+  filter(study.year=="all") %>% 
+  filter(pop.type=="general.pop.all") %>% 
+  mutate(age_gr2=ifelse(strata=="overall", "Overall", as.character(age_gr2))) %>% 
+  mutate(age_gr2=factor(age_gr2,
+                        levels=c("<=44","45-64",">=65", "Overall" ))) %>% 
+  mutate(gender=ifelse(strata=="overall", "Overall", as.character(gender))) 
+  
+  
+
+gg.general.format.facet(
+  plot.data %>% 
+  ggplot(aes(age_gr2,ir_100000, colour=db, type, group=paste0(db, pop.type))) +
+  facet_grid(outcome.name~  gender, scales = "free", switch="y")+
+  geom_errorbar(aes(ymin=ir_100000_lower,ymax=ir_100000_upper), size=1,
+                width=0,position=position_dodge(width=0.5) )+
+  geom_point(position=position_dodge(width=0.5), size=3 )+
+  theme_bw()+
+  ylab("Incidence rate\nper 100,000 person-years\n")+
+  xlab("Age group")+
+    scale_color_manual(values=c("#e41a1c", "#377eb8"))
+  )
 
 
 # IR per month for given pop-----
@@ -269,7 +388,8 @@ est<-Network.IR %>%
          outcome.name,ir_100000_upper,
          db, age_gr2,gender,
          pop.type) %>% 
-  filter(db=="SIDIAP_H")
+  filter(pop.type=="general.pop.all")
+  
 
 est$per.year<-est$ir_100000/1000000
 est$per.year.pop<-est$per.year*pop.size
@@ -287,30 +407,30 @@ est$per.month_upper<-est$per.year.pop_upper/12
 
 
 
-
-ggplot(data = est, aes(x =db , y = outcome.name)) + 
-  facet_grid(outcome.name+pop.type~  age_gr2+ gender, scales = "free", switch="y")+
+ggplot(data = est, 
+           aes(x =1 , y = db)) + 
+  facet_grid(outcome.name~  age_gr2+ gender, scales = "free", switch="y")+
   geom_tile(aes(fill = per.month_upper), color = "white", size = 1)+
   geom_text(aes(label=paste0(round(per.month),
                              "\n(", round(per.month_lower), " to ",
                 round(per.month_upper), ")"),
                 fontface = "bold")) +
-  theme(panel.spacing = unit(0.1, "lines"),
+  theme(panel.spacing.x = unit(0, "lines"),
+        panel.spacing.y = unit(1, "lines"),
         legend.title = element_blank(),
-        axis.text =element_blank(),
+        axis.text =element_text(size=12, colour="black", face="bold"),
         axis.ticks = element_blank(),
         axis.title=element_blank(),
         strip.text = element_text(size=14, face="bold"),
         strip.text.y.left = element_text(angle = 0),
         strip.background = element_rect( fill="#f7f7f7"),
        axis.title.y =  element_blank(),
-        legend.text=element_text(size=14)) +
+        legend.text=element_text(size=14),
+      legend.position = "bottom") +
   scale_x_discrete(expand = c(0, 0))+
-  scale_y_discrete(expand = c(0, 0))+ 
+  scale_y_discrete(expand = c(0, 0),position = "right")+ 
   scale_fill_gradient(low = "#fee0d2", 
                       high = "#ef3b2c") 
-
-
 
 
 
