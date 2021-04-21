@@ -6,7 +6,7 @@
         "VisitOccurrence": {
           "OccurrenceStartDate": {
             "Value": "2018-01-01",
-            "Extent": "2018-12-30",
+            "Extent": "2018-12-31",
             "Op": "bt"
           }
         }

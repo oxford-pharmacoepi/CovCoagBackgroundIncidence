@@ -64,6 +64,9 @@ test.run<-FALSE
 # one baseline medication, and one outcome of interest
 # if that works, then change back to TRUE and re-run for the full analysis
 
+create.outcome.cohorts<-TRUE
+# if you have already created the outcome cohorts, you can set this to FALSE to skip instantiating these cohorts again
+
 # run the analysis
 source(here("RunAnalysis.R"))
 

@@ -31,7 +31,7 @@ from
 
 ) C
 
-WHERE (C.visit_start_date >= DATEFROMPARTS(2019, 01, 01) and C.visit_start_date <= DATEFROMPARTS(2019, 12, 30))
+WHERE (C.visit_start_date >= DATEFROMPARTS(2019, 01, 01) and C.visit_start_date <= DATEFROMPARTS(2019, 12, 31))
 -- End Visit Occurrence Criteria
 
   ) E
