@@ -172,24 +172,36 @@ outcome.cohorts<-outcome.cohorts %>%
 # specify which events we´ll also combine with thrombocytopenia ------
 outcome.cohorts.thromb.10_10<-outcome.cohorts %>% 
   filter(name %in% 
-         c("CVST", "IVT",
-                     "splenic vein", "splenic artery",
-                     "splenic infarc",
-                     "hepatic vein", "hepatic artery", 
-                     "portal vein", "intest infarc",
-                     "mesen vein", "CAT",
-                     "visc venous", "SVT"))
+         c("all stroke","CVST","DIC",
+           "DVT broad","DVT narrow",
+           "VTE broad", "VTE narrow",
+           "PE", "hem stroke",
+           "hepatic vein" ,"intest infarc",
+           "isc stroke", "IVT", "MACE",
+           "MI isc stroke", "PE",
+           "portal vein","splenic infarc",
+           "SVT" , "visc venous","VTE broad" ,"VTE narrow", 
+            "splenic vein", "splenic artery",
+            "splenic infarc", "hepatic artery", 
+                    "intest infarc",
+                     "mesen vein", "CAT"))
 outcome.cohorts.thromb.10_10$name<-paste0(outcome.cohorts.thromb.10_10$name, " (with thrombocytopenia 10 days pre to 10 days post)")
 
 outcome.cohorts.thromb.42_14<-outcome.cohorts %>% 
   filter(name %in% 
-           c("CVST", "IVT",
-             "splenic vein", "splenic artery",
-             "splenic infarc",
-             "hepatic vein", "hepatic artery", 
-             "portal vein", "intest infarc",
-             "mesen vein", "CAT",
-             "visc venous", "SVT"))
+           c("all stroke","CVST","DIC",
+           "DVT broad","DVT narrow",
+           "VTE broad", "VTE narrow",
+           "PE", "hem stroke",
+           "hepatic vein" ,"intest infarc",
+           "isc stroke", "IVT", "MACE",
+           "MI isc stroke", "PE",
+           "portal vein","splenic infarc",
+           "SVT" , "visc venous","VTE broad" ,"VTE narrow", 
+            "splenic vein", "splenic artery",
+            "splenic infarc", "hepatic artery", 
+                    "intest infarc",
+                     "mesen vein", "CAT"))
 outcome.cohorts.thromb.42_14$name<-paste0(outcome.cohorts.thromb.42_14$name, " (with thrombocytopenia 42 days pre to 14 days post)")
 
 # add to outcomes
@@ -369,6 +381,23 @@ Pop<-Pop %>%
                        NA)))) %>% 
   mutate(age_gr2= factor(age_gr2, 
                    levels = c("<=44", "45-64",">=65")))
+
+# another alternative set of age groups
+Pop<-Pop %>% 
+  mutate(age_gr3=ifelse(age<20,  "<20",
+                ifelse(age>=20 &  age<=29,  "20-29",
+                ifelse(age>=30 &  age<=39,  "30-39",
+                ifelse(age>=40 &  age<=49,  "40-49",
+                ifelse(age>=50 &  age<=59,  "50-59",
+                ifelse(age>=60 & age<=69,  "60-69",
+                ifelse(age>=70 & age<=79,  "70-79",      
+                ifelse(age>=80, ">=80",
+                       NA))))))))) %>% 
+  mutate(age_gr3= factor(age_gr3, 
+                   levels = c("<20", "20-29","30-39","40-49", "50-59",
+                              "60-69", "70-79",">=80")))
+
+
 
 # gender
 #8507 male
@@ -617,7 +646,7 @@ Patient.characteristcis.for.plotting[[paste0("exposure population",";",years.of.
   mutate(pop.type=pop.type)
 
 Patient.characteristcis.for.plotting[[paste0("exposure population",";",years.of.interest[i],";",o,";",pop.type,";","age_gr2")]]<- Pop %>% 
-  group_by(age_gr) %>% 
+  group_by(age_gr2) %>% 
   tally() %>% 
   mutate(group="exposure population") %>% 
   mutate(type="age_gr2") %>% 
@@ -626,10 +655,28 @@ Patient.characteristcis.for.plotting[[paste0("exposure population",";",years.of.
   mutate(pop.type=pop.type)
 
 Patient.characteristcis.for.plotting[[paste0("exposure population",";",years.of.interest[i],";",o,";",pop.type,";","age_gr2_gender")]]<- Pop %>% 
-  group_by(age_gr,gender) %>% 
+  group_by(age_gr2,gender) %>% 
   tally() %>% 
   mutate(group="exposure population") %>% 
   mutate(type="age_gr2_gender") %>% 
+  mutate(study.year=years.of.interest[i]) %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+Patient.characteristcis.for.plotting[[paste0("exposure population",";",years.of.interest[i],";",o,";",pop.type,";","age_gr3")]]<- Pop %>% 
+  group_by(age_gr3) %>% 
+  tally() %>% 
+  mutate(group="exposure population") %>% 
+  mutate(type="age_gr3") %>% 
+  mutate(study.year=years.of.interest[i]) %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+Patient.characteristcis.for.plotting[[paste0("exposure population",";",years.of.interest[i],";",o,";",pop.type,";","age_gr3_gender")]]<- Pop %>% 
+  group_by(age_gr3,gender) %>% 
+  tally() %>% 
+  mutate(group="exposure population") %>% 
+  mutate(type="age_gr3_gender") %>% 
   mutate(study.year=years.of.interest[i]) %>% 
   mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
   mutate(pop.type=pop.type)
@@ -661,7 +708,7 @@ working.Pop<-working.Pop %>%
 
 # event of interest ------
 if(working.outcome.name=="imm throm"){
-  # for imm throm, either this specific cohort on diagnosis codes or HIT (which included drug eras)
+  # for imm throm, either this specific cohort based on diagnosis codes or HIT (which included drug eras)
  ids<-c(outcome.cohorts %>% 
           filter(name=="HIT") %>% 
           select(id) %>% pull(),
@@ -869,6 +916,21 @@ working.Pop.w.outcome<-working.Pop.w.outcome %>%
                        NA)))) %>% 
   mutate(age_gr2= factor(age_gr2, 
                    levels = c("<=44", "45-64",">=65")))
+
+# another alternative set of age groups
+working.Pop.w.outcome<-working.Pop.w.outcome %>% 
+  mutate(age_gr3=ifelse(age<20,  "<20",
+                ifelse(age>=20 &  age<=29,  "20-29",
+                ifelse(age>=30 &  age<=39,  "30-39",
+                ifelse(age>=40 &  age<=49,  "40-49",
+                ifelse(age>=50 &  age<=59,  "50-59",
+                ifelse(age>=60 & age<=69,  "60-69",
+                ifelse(age>=70 & age<=79,  "70-79",      
+                ifelse(age>=80, ">=80",
+                       NA))))))))) %>% 
+  mutate(age_gr3= factor(age_gr3, 
+                   levels = c("<20", "20-29","30-39","40-49", "50-59",
+                              "60-69", "70-79",">=80")))
 
 # add prior observation time -----
 working.Pop.w.outcome<-working.Pop.w.outcome %>%  
@@ -1117,6 +1179,23 @@ Patient.characteristcis.for.plotting[[paste0(working.outcome.name,";",years.of.i
   mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
   mutate(pop.type=pop.type)
 
+Patient.characteristcis.for.plotting[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr3")]]<- working.Pop.w.outcome %>% 
+  group_by(age_gr3) %>% 
+  tally() %>% 
+  mutate(group=working.outcome.name) %>% 
+  mutate(type="age_gr3") %>% 
+  mutate(study.year=years.of.interest[i]) %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+Patient.characteristcis.for.plotting[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr3_gender")]]<- working.Pop.w.outcome %>% 
+  group_by(age_gr3,gender) %>% 
+  tally() %>% 
+  mutate(group=working.outcome.name) %>% 
+  mutate(type="age_gr3_gender") %>% 
+  mutate(study.year=years.of.interest[i]) %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
 
 Patient.characteristcis.for.plotting[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","gender")]]<- working.Pop.w.outcome %>% 
   group_by(gender) %>% 
@@ -1169,6 +1248,21 @@ IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.t
             events=sum(f_u.outcome)) %>% 
   mutate(ir_100000=(events/years)*100000) %>% 
   mutate(strata="age_gr2_gender") %>% 
+  mutate(outcome=working.outcome) %>% 
+  mutate(outcome.name=working.outcome.name) %>% 
+  mutate(study.year="all") %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+# by age (thrid definition) and gender
+IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr3_gender")]]<-working.Pop %>%  
+  group_by(age_gr3, gender) %>% 
+  summarise(n=length(person_id),
+            days=sum(f_u.outcome.days),
+            years=(days/365.25),
+            events=sum(f_u.outcome)) %>% 
+  mutate(ir_100000=(events/years)*100000) %>% 
+  mutate(strata="age_gr3_gender") %>% 
   mutate(outcome=working.outcome) %>% 
   mutate(outcome.name=working.outcome.name) %>% 
   mutate(study.year="all") %>% 
