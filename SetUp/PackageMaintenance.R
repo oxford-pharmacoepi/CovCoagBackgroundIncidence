@@ -22,8 +22,8 @@ for(i in 1:length(jsons)){
 
 sqls<-list.files(paste0(cohort.diag.path, "/inst/sql/sql_server"))
 # drop hosp cohorts
-sqls<-sql[str_detect(sql,"hosp", negate = TRUE)]
-for(i in 1:length(jsons)){
+sqls<-sqls[str_detect(sqls,"hosp", negate = TRUE)]
+for(i in 1:length(sqls)){
   file.copy(from=paste0(cohort.diag.path, "/inst/sql/sql_server/",sqls[i]), 
             to=here("OutcomeCohorts", "sql"), 
             overwrite = TRUE, recursive = FALSE, 
