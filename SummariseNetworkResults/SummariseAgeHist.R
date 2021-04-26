@@ -24,40 +24,62 @@ Network.patient.characteristcis.for.plotting<-bind_rows(Network.patient.characte
 
 
 plot.data<-Network.patient.characteristcis.for.plotting %>%
-                          filter(group %in% c("exposure population","CVST",
-                                              "PE (with thrombocytopenia 10 days pre to 10 days post)", 
-                                              "DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
-                                              "imm throm",
-                                              "isc stroke (with thrombocytopenia 10 days pre to 10 days post)",
-                                              "SVT")) %>%
-  mutate(group=ifelse(group=="exposure population", "Study\npopulation",
-                      group)) %>%
+                          filter(group %in% 
+           c("CVST",
+               "CVST (with thrombocytopenia 10 days pre to 10 days post)",
+               "DIC",
+               "DIC (with thrombocytopenia 10 days pre to 10 days post)",
+                   "PE (with thrombocytopenia 10 days pre to 10 days post)", 
+                   "DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
+                 "imm throm",
+                "all stroke (with thrombocytopenia 10 days pre to 10 days post)",
+               "SVT",
+                "SVT (with thrombocytopenia 10 days pre to 10 days post)")) %>% 
   mutate(group=ifelse(group=="PE (with thrombocytopenia 10 days pre to 10 days post)", 
                       "Pulmonary\nembolism -\nthrombocytopenia",
                       group)) %>%
-    mutate(group=ifelse(group=="CVST", "Cerebral venous\nsinus thrombosis",
+    mutate(group=ifelse(group=="CVST (with thrombocytopenia 10 days pre to 10 days post)",
+                               "Cerebral venous\nsinus thrombosis -\nthrombocytopenia",
+                      group)) %>%
+    mutate(group=ifelse(group=="CVST",
+                               "Cerebral venous\nsinus thrombosis",
+                      group)) %>%
+    mutate(group=ifelse(group=="DIC",
+                               "Disseminated\nintravascular\ncoagulation",
+                      group)) %>%
+    mutate(group=ifelse(group=="DIC (with thrombocytopenia 10 days pre to 10 days post)",
+                               "Disseminated\nintravascular\ncoagulation -\nthrombocytopenia",
                       group)) %>%
   mutate(group=ifelse(group=="DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
                       "Deep vein\nthrombosis -\nthrombocytopenia",
                       group)) %>%
-    mutate(group=ifelse(group=="isc stroke (with thrombocytopenia 10 days pre to 10 days post)", "Ischemic stroke -\nthrombocytopenia",
+    mutate(group=ifelse(group=="all stroke (with thrombocytopenia 10 days pre to 10 days post)", "Stroke -\nthrombocytopenia",
                       group)) %>%
   mutate(group=ifelse(group=="imm throm", "Immune\nthrombocytopenia",
+                      group))  %>%
+  mutate(group=ifelse(group=="SVT", 
+                             "Splanchnic vein\nthrombosis",
+                      group))%>%
+  mutate(group=ifelse(group=="SVT (with thrombocytopenia 10 days pre to 10 days post)", 
+                             "Splanchnic vein\nthrombosis -\nthrombocytopenia",
                       group)) %>%
-  mutate(group=ifelse(group=="SVT", "Splanchnic vein\nthrombosis",
-                      group)) %>%
-                          filter(type=="age_gr_gender") %>% 
   mutate(group=factor(group, 
-                levels=c("Study\npopulation",
-                         "Deep vein\nthrombosis -\nthrombocytopenia","Pulmonary\nembolism -\nthrombocytopenia", 
-                         "Ischemic stroke -\nthrombocytopenia",
-                         "Cerebral venous\nsinus thrombosis","Immune\nthrombocytopenia",
-                         "Splanchnic vein\nthrombosis"
+                levels=c("Cerebral venous\nsinus thrombosis",
+                         "Cerebral venous\nsinus thrombosis -\nthrombocytopenia",
+                         "Deep vein\nthrombosis -\nthrombocytopenia",
+                         "Disseminated\nintravascular\ncoagulation",
+                         "Disseminated\nintravascular\ncoagulation -\nthrombocytopenia",
+                         "Immune\nthrombocytopenia",
+                         "Pulmonary\nembolism -\nthrombocytopenia",
+                         "Splanchnic vein\nthrombosis",
+                         "Splanchnic vein\nthrombosis -\nthrombocytopenia",
+                         "Stroke -\nthrombocytopenia"
                          )
-                )) %>% 
+                )) %>%
+                          filter(type=="age_gr2_gender") %>% 
                           # mutate(db="sidiap_h") %>%
   filter(prior.obs.required=="No") %>% 
-  filter(pop.type=="general.pop.all")
+  filter(pop.type=="general.pop.all") 
                            
   
 plot.data<-plot.data %>% 
@@ -72,7 +94,7 @@ plot.data%>%
 p<-gg.general.format.facet.perc(
   plot.data%>% 
   ggplot()+
-  geom_col(aes(age_gr,perc, fill=gender),width=1,
+  geom_col(aes(age_gr2,perc, fill=gender),width=1,
            colour="black")+
   facet_grid(group~ db, switch="y")+
   theme(axis.text=element_text(size=12),

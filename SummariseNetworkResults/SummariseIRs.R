@@ -29,11 +29,15 @@ rm(IR.conf)
 # IRs for events of interest ----
 plot.data<-Network.IR %>% 
   filter(outcome.name %in% 
-           c(c("CVST (with thrombocytopenia 10 days pre to 10 days post)",
+           c(c("CVST",
+               "CVST (with thrombocytopenia 10 days pre to 10 days post)",
+               "DIC",
+               "DIC (with thrombocytopenia 10 days pre to 10 days post)",
                    "PE (with thrombocytopenia 10 days pre to 10 days post)", 
                    "DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
                  "imm throm",
-                "isc stroke (with thrombocytopenia 10 days pre to 10 days post)",
+                "all stroke (with thrombocytopenia 10 days pre to 10 days post)",
+               "SVT",
                "SVT (with thrombocytopenia 10 days pre to 10 days post)")) )%>% 
   mutate(outcome.name=ifelse(outcome.name=="PE (with thrombocytopenia 10 days pre to 10 days post)", 
                       "Pulmonary\nembolism -\nthrombocytopenia",
@@ -41,27 +45,55 @@ plot.data<-Network.IR %>%
     mutate(outcome.name=ifelse(outcome.name=="CVST (with thrombocytopenia 10 days pre to 10 days post)",
                                "Cerebral venous\nsinus thrombosis -\nthrombocytopenia",
                       outcome.name)) %>%
+    mutate(outcome.name=ifelse(outcome.name=="CVST",
+                               "Cerebral venous\nsinus thrombosis",
+                      outcome.name)) %>%
+    mutate(outcome.name=ifelse(outcome.name=="DIC",
+                               "Disseminated\nintravascular\ncoagulation",
+                      outcome.name)) %>%
+    mutate(outcome.name=ifelse(outcome.name=="DIC (with thrombocytopenia 10 days pre to 10 days post)",
+                               "Disseminated\nintravascular\ncoagulation -\nthrombocytopenia",
+                      outcome.name)) %>%
   mutate(outcome.name=ifelse(outcome.name=="DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
                       "Deep vein\nthrombosis -\nthrombocytopenia",
                       outcome.name)) %>%
-    mutate(outcome.name=ifelse(outcome.name=="isc stroke (with thrombocytopenia 10 days pre to 10 days post)", "Ischemic stroke -\nthrombocytopenia",
+    mutate(outcome.name=ifelse(outcome.name=="all stroke (with thrombocytopenia 10 days pre to 10 days post)", "Stroke -\nthrombocytopenia",
                       outcome.name)) %>%
   mutate(outcome.name=ifelse(outcome.name=="imm throm", "Immune\nthrombocytopenia",
-                      outcome.name)) %>%
+                      outcome.name))  %>%
+  mutate(outcome.name=ifelse(outcome.name=="SVT", 
+                             "Splanchnic vein\nthrombosis",
+                      outcome.name))%>%
   mutate(outcome.name=ifelse(outcome.name=="SVT (with thrombocytopenia 10 days pre to 10 days post)", 
                              "Splanchnic vein\nthrombosis -\nthrombocytopenia",
                       outcome.name)) %>%
   mutate(outcome.name=factor(outcome.name, 
-                levels=c("Deep vein\nthrombosis -\nthrombocytopenia","Pulmonary\nembolism -\nthrombocytopenia", 
-                         "Ischemic stroke -\nthrombocytopenia",
+                levels=c("Cerebral venous\nsinus thrombosis",
                          "Cerebral venous\nsinus thrombosis -\nthrombocytopenia",
+                         "Deep vein\nthrombosis -\nthrombocytopenia",
+                         "Disseminated\nintravascular\ncoagulation",
+                         "Disseminated\nintravascular\ncoagulation -\nthrombocytopenia",
                          "Immune\nthrombocytopenia",
-                         "Splanchnic vein\nthrombosis -\nthrombocytopenia"
+                         "Pulmonary\nembolism -\nthrombocytopenia",
+                         "Splanchnic vein\nthrombosis",
+                         "Splanchnic vein\nthrombosis -\nthrombocytopenia",
+                         "Stroke -\nthrombocytopenia"
                          )
                 )) %>%
   mutate(study.year=ifelse(study.year=="all","Overall", study.year)) %>% 
   filter(prior.obs.required=="No") %>% 
   filter(pop.type=="general.pop.all")
+
+equal_breaks <- function(n = 3, s = 0.05, ...){
+  function(x){
+   
+    # rescaling
+    # d <- s * diff(range(x)) / (1+2*s)
+    # round(seq(min(x)+d, max(x)-d, length=n))[1:(n-1)]
+    # round(c(0, as.numeric(quantile(x, 1/3)),as.numeric(quantile(x, 2/3) )))
+    round(c(0, as.numeric(quantile(x, 0.5)) ))
+  }
+}
 
 p<-gg.general.format.facet(
   plot.data %>% 
@@ -74,22 +106,24 @@ p<-gg.general.format.facet(
   theme_bw()+
   ylab("Incidence rate\nper 100,000 person-years\n")+
   xlab("Database")
-  )+theme(panel.spacing = unit(0, "lines"))
+  )+theme(panel.spacing = unit(0.15, "lines"))+
+  scale_y_continuous(position = "right", limits=c(0,NA),
+                     breaks=equal_breaks(n=4))
 
 # colours by type
 p
-g <- ggplot_gtable(ggplot_build(p))
-strip_both <- which(grepl('strip-l', g$layout$name))
-fills <- c(rep("#d9d9d9",2),
-           rep("#bdbdbd",1),
-           rep("#969696",3))
-k <- 1
-for (i in strip_both) {
-j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
-g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
-k <- k+1
-}
-grid::grid.draw(g)
+# g <- ggplot_gtable(ggplot_build(p))
+# strip_both <- which(grepl('strip-l', g$layout$name))
+# fills <- c(rep("#d9d9d9",2),
+#            rep("#bdbdbd",1),
+#            rep("#969696",3))
+# k <- 1
+# for (i in strip_both) {
+# j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
+# g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
+# k <- k+1
+# }
+# grid::grid.draw(g)
 
 
 # IR per month for given pop-----
@@ -109,104 +143,97 @@ est<-plot.data %>%
 
 est$per.year<-est$ir_100000/100000
 est$per.year.pop<-est$per.year*pop.size
-est$per.month<-est$per.year.pop/12
+est$per.28.day<-(est$per.year.pop/365.25)*28
 
 est$per.year_lower<-est$ir_100000_lower/100000
 est$per.year.pop_lower<-est$per.year_lower*pop.size
-est$per.month_lower<-est$per.year.pop_lower/12
+est$per.28.day_lower<-(est$per.year.pop_lower/365.25)*28
 
 est$per.year_upper<-est$ir_100000_upper/100000
 est$per.year.pop_upper<-est$per.year_upper*pop.size
-est$per.month_upper<-est$per.year.pop_upper/12
-
-# est<-plot.data %>%
-#   filter(strata=="overall") %>%
-#   filter(study.year=="Overall") %>%
-#   select(n, days, events,
-#          outcome.name,
-#          db
-#          ) %>%
-#   filter(pop.type=="general.pop.all")
-# 
-# events.per.day<-(est$events/est$days)
-# events.per.28.days<-events.per.day*28
-# events.per.28.days.pop<-events.per.28.days*pop.size 
-
+est$per.28.day_upper<-(est$per.year.pop_upper/365.25)*28
 
 p<-ggplot(data = est, 
-           aes(x =1 , y = db)) + 
+           aes(x =1 , y = 1)) + 
   facet_grid(outcome.name~  db, scales = "free", switch="y")+
-  geom_tile(aes(fill = per.month_upper), color = "white", size = 1)+
-  geom_text(aes(label=paste0(round(per.month),
-                             "\n(", round(per.month_lower), " to ",
-                round(per.month_upper), ")"),
+  geom_tile(aes(fill = per.28.day_upper), color = "white", size = 1)+
+  geom_text(aes(label=paste0(nice.num.count(per.28.day),
+                             "\n(", nice.num.count(per.28.day_lower), " to ",
+                nice.num.count(per.28.day_upper), ")"),
                 fontface = "bold")) +
-  theme(panel.spacing.x = unit(0, "lines"),
-        panel.spacing.y = unit(1, "lines"),
+  theme(axis.text.y = element_blank(),
+    panel.spacing = unit(0, "lines"),
         legend.title = element_blank(),
-        axis.text =element_text(size=12, colour="black", face="bold"),
+        axis.text =element_text(size=6, colour="black", face="bold"),
         axis.ticks = element_blank(),
         axis.title=element_blank(),
-        strip.text = element_text(size=14, face="bold"),
+        strip.text = element_text(size=12, face="bold"),
         strip.text.y.left = element_text(angle = 0),
         strip.background = element_rect( fill="#f7f7f7"),
        axis.title.y =  element_blank(),
-        legend.text=element_text(size=14),
+        legend.text=element_text(size=10),
       legend.position = "bottom") +
   scale_x_discrete(expand = c(0, 0))+
   scale_y_discrete(expand = c(0, 0),position = "right")+ 
   scale_fill_gradient(low = "#fee0d2", 
-                      high = "#ef3b2c") 
+                      high = "#ef3b2c")
+
 # colours by type
 p
-g <- ggplot_gtable(ggplot_build(p))
-strip_both <- which(grepl('strip-l', g$layout$name))
-fills <- c(rep("#d9d9d9",2),
-           rep("#bdbdbd",1),
-           rep("#969696",3))
-k <- 1
-for (i in strip_both) {
-j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
-g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
-k <- k+1
-}
-grid::grid.draw(g)
+# g <- ggplot_gtable(ggplot_build(p))
+# strip_both <- which(grepl('strip-l', g$layout$name))
+# fills <- c(rep("#d9d9d9",2),
+#            rep("#bdbdbd",1),
+#            rep("#969696",3))
+# k <- 1
+# for (i in strip_both) {
+# j <- which(grepl('rect', g$grobs[[i]]$grobs[[1]]$childrenOrder))
+# g$grobs[[i]]$grobs[[1]]$children[[j]]$gp$fill <- fills[k]
+# k <- k+1
+# }
+# grid::grid.draw(g)
 
 # table ------
 table.data<-Network.IR %>% 
   filter(outcome.name %in% 
            c(c("CVST",
+               "CVST (with thrombocytopenia 10 days pre to 10 days post)",
+               "DIC",
+               "DIC (with thrombocytopenia 10 days pre to 10 days post)",
                    "PE (with thrombocytopenia 10 days pre to 10 days post)", 
                    "DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
                  "imm throm",
-                "isc stroke (with thrombocytopenia 10 days pre to 10 days post)",
-               "SVT")) )%>% 
-    mutate(outcome.name=ifelse(outcome.name=="CVST", "Cerebral venous sinus thrombosis",
+                "all stroke (with thrombocytopenia 10 days pre to 10 days post)",
+               "SVT",
+               "SVT (with thrombocytopenia 10 days pre to 10 days post)")) )%>% 
+  mutate(outcome.name=ifelse(outcome.name=="PE (with thrombocytopenia 10 days pre to 10 days post)", 
+                      "Pulmonary embolism - thrombocytopenia",
                       outcome.name)) %>%
-      mutate(outcome.name=ifelse(outcome.name=="PE (with thrombocytopenia 10 days pre to 10 days post)", 
-                                 "Pulmonary embolism - thrombocytopenia",
+    mutate(outcome.name=ifelse(outcome.name=="CVST (with thrombocytopenia 10 days pre to 10 days post)",
+                               "Cerebral venous sinus thrombosis - thrombocytopenia",
                       outcome.name)) %>%
-        mutate(outcome.name=ifelse(outcome.name=="DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
-                                 "Deep vein thrombosis - thrombocytopenia",
+    mutate(outcome.name=ifelse(outcome.name=="CVST",
+                               "Cerebral venous sinus thrombosis",
                       outcome.name)) %>%
-      mutate(outcome.name=ifelse(outcome.name=="isc stroke (with thrombocytopenia 10 days pre to 10 days post)", 
-                                 "Ischemic stroke - thrombocytopenia",
+    mutate(outcome.name=ifelse(outcome.name=="DIC",
+                               "Disseminated intravascular coagulation",
                       outcome.name)) %>%
-    mutate(outcome.name=ifelse(outcome.name=="isc stroke (with thrombocytopenia 10 days pre to 10 days post)", 
-                               "Ischemic stroke - thrombocytopenia",
+    mutate(outcome.name=ifelse(outcome.name=="DIC (with thrombocytopenia 10 days pre to 10 days post)",
+                               "Disseminated intravascular coagulation - thrombocytopenia",
+                      outcome.name)) %>%
+  mutate(outcome.name=ifelse(outcome.name=="DVT broad (with thrombocytopenia 10 days pre to 10 days post)", 
+                      "Deep vein thrombosis - thrombocytopenia",
+                      outcome.name)) %>%
+    mutate(outcome.name=ifelse(outcome.name=="all stroke (with thrombocytopenia 10 days pre to 10 days post)", "Stroke - thrombocytopenia",
                       outcome.name)) %>%
   mutate(outcome.name=ifelse(outcome.name=="imm throm", "Immune thrombocytopenia",
+                      outcome.name))  %>%
+  mutate(outcome.name=ifelse(outcome.name=="SVT", 
+                             "Splanchnic vein thrombosis",
+                      outcome.name))%>%
+  mutate(outcome.name=ifelse(outcome.name=="SVT (with thrombocytopenia 10 days pre to 10 days post)", 
+                             "Splanchnic vein thrombosis - thrombocytopenia",
                       outcome.name)) %>%
-  mutate(outcome.name=ifelse(outcome.name=="SVT", "Splanchnic vein thrombosis",
-                      outcome.name)) %>%
-  mutate(outcome.name=factor(outcome.name, 
-                levels=c( "Deep vein thrombosis - thrombocytopenia",
-                          "Pulmonary embolism - thrombocytopenia", 
-                         "Ischemic stroke - thrombocytopenia",
-                         "Cerebral venous sinus thrombosis","Immune thrombocytopenia",
-                         "Splanchnic vein thrombosis"
-                         )
-                )) %>%
   mutate(study.year=ifelse(study.year=="all","Overall", study.year)) %>% 
   filter(prior.obs.required=="No") %>% 
   filter(pop.type=="general.pop.all")
@@ -230,6 +257,21 @@ table.data<-table.data %>%
          outcome.name,
          n,years,events,
          ir) 
+
+table.data<-table.data %>% 
+  pivot_wider(
+    names_from = db, 
+    names_glue = "{db} {.value}",
+    values_from = c(n,years,events,ir))
+
+table.data<-bind_cols(
+  table.data %>% select(outcome.name),
+  table.data %>% 
+    select(-outcome.name) %>% 
+  select(order(colnames(table.data %>% 
+    select(-outcome.name))))
+)
+
 write.csv(table.data,
           here("SummariseNetworkResults", "table2.csv"))
 

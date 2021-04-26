@@ -1222,7 +1222,20 @@ IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.t
   mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
   mutate(pop.type=pop.type)
 
-   
+# by gender
+IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","gender")]]<-working.Pop %>%  
+  group_by(gender) %>% 
+  summarise(n=length(person_id),
+            days=sum(f_u.outcome.days),
+            years=(days/365.25),
+            events=sum(f_u.outcome)) %>% 
+  mutate(ir_100000=(events/years)*100000) %>% 
+  mutate(strata="gender") %>% 
+  mutate(outcome=working.outcome) %>% 
+  mutate(outcome.name=working.outcome.name) %>% 
+  mutate(study.year="all") %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)   
    
 # by age and gender
 IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr_gender")]]<-working.Pop %>%  
@@ -1268,6 +1281,53 @@ IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.t
   mutate(study.year="all") %>% 
   mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
   mutate(pop.type=pop.type)
+
+# by age 
+IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr")]]<-working.Pop %>%  
+  group_by(age_gr) %>% 
+  summarise(n=length(person_id),
+            days=sum(f_u.outcome.days),
+            years=(days/365.25),
+            events=sum(f_u.outcome)) %>% 
+  mutate(ir_100000=(events/years)*100000) %>% 
+  mutate(strata="age_gr") %>% 
+  mutate(outcome=working.outcome) %>% 
+  mutate(outcome.name=working.outcome.name) %>% 
+  mutate(study.year="all") %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+# by age (fewer groups) and gender
+IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr2")]]<-working.Pop %>%  
+  group_by(age_gr2) %>% 
+  summarise(n=length(person_id),
+            days=sum(f_u.outcome.days),
+            years=(days/365.25),
+            events=sum(f_u.outcome)) %>% 
+  mutate(ir_100000=(events/years)*100000) %>% 
+  mutate(strata="age_gr2") %>% 
+  mutate(outcome=working.outcome) %>% 
+  mutate(outcome.name=working.outcome.name) %>% 
+  mutate(study.year="all") %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+# by age (thrid definition) and gender
+IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr3")]]<-working.Pop %>%  
+  group_by(age_gr3, gender) %>% 
+  summarise(n=length(person_id),
+            days=sum(f_u.outcome.days),
+            years=(days/365.25),
+            events=sum(f_u.outcome)) %>% 
+  mutate(ir_100000=(events/years)*100000) %>% 
+  mutate(strata="age_gr3") %>% 
+  mutate(outcome=working.outcome) %>% 
+  mutate(outcome.name=working.outcome.name) %>% 
+  mutate(study.year="all") %>% 
+  mutate(prior.obs.required=ifelse(o==1, "No", "Yes")) %>% 
+  mutate(pop.type=pop.type)
+
+
 
 # by age, gender, and history of event
 IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr_gender_history")]]<-working.Pop %>%  
