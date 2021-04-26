@@ -5,9 +5,9 @@ CREATE TABLE #Codesets (
 ;
 
 INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 7 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4102202,4048786,4043735,4111713,314667,4116206,4121335,4119136,4041680,4100225,4217471,4104695,4167985,764714,4100224,4098706,4277833,764710,4228209,4234264,4048890,4057329,4102203,4290940,4079905,4105338)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4111714,4102202,4046443,762938,762811,4048787,4048786,4043735,4120316,4194609,4179912,4111713,314667,764503,4116206,4047634,4043901,4121335,4119136,4041680,4100225,764716,4217471,4104695,4319332,4167985,764712,764714,764708,763149,4100224,4098706,4277833,764710,764726,4228209,4234264,762828,4319329,4048890,4057329,764723,4102203,4290940,4079905,4105338)
 
 ) I
 ) C;
@@ -32,7 +32,7 @@ FROM
 (
   SELECT co.* 
   FROM @cdm_database_schema.CONDITION_OCCURRENCE co
-  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 7))
+  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 0))
 ) C
 
 

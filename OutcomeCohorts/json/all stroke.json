@@ -771,6 +771,57 @@
 						"isExcluded" : false,
 						"includeDescendants" : false,
 						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4048784,
+							"CONCEPT_NAME" : "Anterior cerebral circulation hemorrhagic infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "230707007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4046362,
+							"CONCEPT_NAME" : "Hemorrhagic cerebral infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "230706003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4043732,
+							"CONCEPT_NAME" : "Posterior cerebral circulation hemorrhagic infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "230708002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
 					}
 				]
 			}

@@ -10,7 +10,7 @@
 			},
 			{
 				"ConditionOccurrence" : {
-					"CodesetId" : 1,
+					"CodesetId" : 3,
 					"ConditionTypeExclude" : false
 				}
 			}
@@ -24,371 +24,6 @@
 		}
 	},
 	"ConceptSets" : [
-		{
-			"id" : 1,
-			"name" : "[EB] CovCoag PE concept set",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120091,
-							"CONCEPT_NAME" : "Acute massive pulmonary embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233936003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45768439,
-							"CONCEPT_NAME" : "Acute pulmonary embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "706870000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45768888,
-							"CONCEPT_NAME" : "Acute pulmonary thromboembolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "707414004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4309039,
-							"CONCEPT_NAME" : "Hemorrhagic pulmonary infarction",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "83727005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 762808,
-							"CONCEPT_NAME" : "Infarction of lung due to embolus",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "432201000124103",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 40480461,
-							"CONCEPT_NAME" : "Infarction of lung due to iatrogenic pulmonary embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "441746000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4108681,
-							"CONCEPT_NAME" : "Postoperative pulmonary embolus",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "194883006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4091708,
-							"CONCEPT_NAME" : "Pulmonary air embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "280964006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 440417,
-							"CONCEPT_NAME" : "Pulmonary embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "59282003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37109911,
-							"CONCEPT_NAME" : "Pulmonary embolism due to and following acute myocardial infarction",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "723859005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37016922,
-							"CONCEPT_NAME" : "Pulmonary embolism on long-term anticoagulation therapy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "713078005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 43530605,
-							"CONCEPT_NAME" : "Pulmonary embolism with pulmonary infarction",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1001000119102",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4119608,
-							"CONCEPT_NAME" : "Pulmonary fat embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233938002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 254662,
-							"CONCEPT_NAME" : "Pulmonary infarction",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "64662007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4253796,
-							"CONCEPT_NAME" : "Pulmonary microemboli",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "74315008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45766471,
-							"CONCEPT_NAME" : "Pulmonary oil microembolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "703636009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4121618,
-							"CONCEPT_NAME" : "Pulmonary thromboembolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233935004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4119610,
-							"CONCEPT_NAME" : "Pulmonary tumor embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233940007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4119607,
-							"CONCEPT_NAME" : "Subacute massive pulmonary embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233937007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4119609,
-							"CONCEPT_NAME" : "Subacute pulmonary fat embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233939005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4236271,
-							"CONCEPT_NAME" : "Recurrent pulmonary embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "438773007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
 		{
 			"id" : 2,
 			"name" : "[EB] CovCoag DVT broad concept set",
@@ -1399,6 +1034,40 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 4042396,
+							"CONCEPT_NAME" : "Deep thrombophlebitis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16750002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 77310,
+							"CONCEPT_NAME" : "Deep vein phlebitis and thrombophlebitis of the leg",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "266267005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4046884,
 							"CONCEPT_NAME" : "Deep vein thrombosis of leg related to air travel",
 							"STANDARD_CONCEPT" : "S",
@@ -1406,6 +1075,23 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "134399007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4189004,
+							"CONCEPT_NAME" : "Deep vein thrombosis of leg related to intravenous drug use",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "413956008",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1637,13 +1323,13 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 193512,
-							"CONCEPT_NAME" : "Embolism and thrombosis of the renal vein",
+							"CONCEPT_ID" : 435565,
+							"CONCEPT_NAME" : "Embolism and thrombosis of the vena cava",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "195438008",
+							"CONCEPT_CODE" : "195437003",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1654,13 +1340,13 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 435565,
-							"CONCEPT_NAME" : "Embolism and thrombosis of the vena cava",
+							"CONCEPT_ID" : 40481089,
+							"CONCEPT_NAME" : "Embolism from thrombosis of vein of lower extremity",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "195437003",
+							"CONCEPT_CODE" : "444816006",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1695,6 +1381,40 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "234041004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4096099,
+							"CONCEPT_NAME" : "Phlebitis of deep veins of lower extremity",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "25114006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 440738,
+							"CONCEPT_NAME" : "Phlebitis of the femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195404000",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1773,6 +1493,23 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 46271900,
+							"CONCEPT_NAME" : "Recurrent deep vein thrombosis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "710167004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4033521,
 							"CONCEPT_NAME" : "Splenic vein thrombosis",
 							"STANDARD_CONCEPT" : "S",
@@ -1797,6 +1534,448 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "197001004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4327889,
+							"CONCEPT_NAME" : "Thromboembolism of vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "429098002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 320741,
+							"CONCEPT_NAME" : "Thrombophlebitis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "64156001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 439838,
+							"CONCEPT_NAME" : "Thrombophlebitis migrans",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "31268005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4230403,
+							"CONCEPT_NAME" : "Thrombophlebitis of axillary vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "438646004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4069561,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1748006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761831,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of bilateral lower limbs",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16014391000119106",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761830,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of left lower limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16014351000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761808,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of left upper limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16006271000119105",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761832,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of right lower limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16014431000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761809,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of right upper limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16006311000119105",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4221821,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep veins of lower extremity",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "40198004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 440750,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep veins of upper extremities",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "95452006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4176614,
+							"CONCEPT_NAME" : "Thrombophlebitis of iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "42861008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761821,
+							"CONCEPT_NAME" : "Thrombophlebitis of left deep femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16012151000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761819,
+							"CONCEPT_NAME" : "Thrombophlebitis of left femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16012071000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 444097,
+							"CONCEPT_NAME" : "Thrombophlebitis of lower extremities",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "46253008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761820,
+							"CONCEPT_NAME" : "Thrombophlebitis of right deep femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16012111000119108",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761818,
+							"CONCEPT_NAME" : "Thrombophlebitis of right femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16011991000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4110339,
+							"CONCEPT_NAME" : "Thrombophlebitis of the anterior tibial vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195412008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4111868,
+							"CONCEPT_NAME" : "Thrombophlebitis of the common iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195425000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4110343,
+							"CONCEPT_NAME" : "Thrombophlebitis of the external iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195427008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 439314,
+							"CONCEPT_NAME" : "Thrombophlebitis of the femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195410000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4109877,
+							"CONCEPT_NAME" : "Thrombophlebitis of the internal iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195426004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4112171,
+							"CONCEPT_NAME" : "Thrombophlebitis of the popliteal vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195411001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4112172,
+							"CONCEPT_NAME" : "Thrombophlebitis of the posterior tibial vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195414009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4250765,
+							"CONCEPT_NAME" : "Thrombophlebitis of tibial vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "7387004",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1974,16 +2153,24 @@
 						"isExcluded" : false,
 						"includeDescendants" : false,
 						"includeMapped" : false
-					},
+					}
+				]
+			}
+		},
+		{
+			"id" : 3,
+			"name" : "[EB] CovCoag PE concept set",
+			"expression" : {
+				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4327889,
-							"CONCEPT_NAME" : "Thromboembolism of vein",
+							"CONCEPT_ID" : 4120091,
+							"CONCEPT_NAME" : "Acute massive pulmonary embolism",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "429098002",
+							"CONCEPT_CODE" : "233936003",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1994,13 +2181,13 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4221821,
-							"CONCEPT_NAME" : "Thrombophlebitis of deep veins of lower extremity",
+							"CONCEPT_ID" : 45768439,
+							"CONCEPT_NAME" : "Acute pulmonary embolism",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "40198004",
+							"CONCEPT_CODE" : "706870000",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -2011,13 +2198,13 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 46271900,
-							"CONCEPT_NAME" : "Recurrent deep vein thrombosis",
+							"CONCEPT_ID" : 45768888,
+							"CONCEPT_NAME" : "Acute pulmonary thromboembolism",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "710167004",
+							"CONCEPT_CODE" : "707414004",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -2028,13 +2215,268 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4189004,
-							"CONCEPT_NAME" : "Deep vein thrombosis of leg related to intravenous drug use",
+							"CONCEPT_ID" : 4309039,
+							"CONCEPT_NAME" : "Hemorrhagic pulmonary infarction",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "413956008",
+							"CONCEPT_CODE" : "83727005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 762808,
+							"CONCEPT_NAME" : "Infarction of lung due to embolus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "432201000124103",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40480461,
+							"CONCEPT_NAME" : "Infarction of lung due to iatrogenic pulmonary embolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "441746000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4108681,
+							"CONCEPT_NAME" : "Postoperative pulmonary embolus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "194883006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 440417,
+							"CONCEPT_NAME" : "Pulmonary embolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "59282003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 37109911,
+							"CONCEPT_NAME" : "Pulmonary embolism due to and following acute myocardial infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "723859005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 37016922,
+							"CONCEPT_NAME" : "Pulmonary embolism on long-term anticoagulation therapy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "713078005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 43530605,
+							"CONCEPT_NAME" : "Pulmonary embolism with pulmonary infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1001000119102",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 254662,
+							"CONCEPT_NAME" : "Pulmonary infarction",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "64662007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4253796,
+							"CONCEPT_NAME" : "Pulmonary microemboli",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "74315008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4121618,
+							"CONCEPT_NAME" : "Pulmonary thromboembolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "233935004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4119610,
+							"CONCEPT_NAME" : "Pulmonary tumor embolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "233940007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4236271,
+							"CONCEPT_NAME" : "Recurrent pulmonary embolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "438773007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36713113,
+							"CONCEPT_NAME" : "Saddle embolus of pulmonary artery",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "328511000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 35615055,
+							"CONCEPT_NAME" : "Saddle embolus of pulmonary artery with acute cor pulmonale",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "15964701000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4119607,
+							"CONCEPT_NAME" : "Subacute massive pulmonary embolism",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "233937007",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"

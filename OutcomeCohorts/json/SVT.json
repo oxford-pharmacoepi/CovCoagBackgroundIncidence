@@ -243,6 +243,23 @@
 						"isExcluded" : false,
 						"includeDescendants" : false,
 						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36712891,
+							"CONCEPT_NAME" : "Chronic thrombosis of splenic vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "143551000119106",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
 					}
 				]
 			}

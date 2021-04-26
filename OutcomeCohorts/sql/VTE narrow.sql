@@ -5,9 +5,16 @@ CREATE TABLE #Codesets (
 ;
 
 INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 9 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4111714,4102202,4046443,762938,762811,4048787,4048786,4043735,4120316,4194609,4179912,4111713,314667,764503,4047634,4043901,4100225,764716,4217471,4104695,4319332,4167985,764712,764708,763149,4100224,4098706,4277833,764710,764726,4228209,4234264,762828,4319329,4048890,4057329,764723,4102203,4290940,4079905,4105338)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (762047,762148,761444,35616028,35615035,761416,35615031,43531681,35616027,35615034,761415,35615030,44782746,44782751,762008,760875,765155,762017,762417,762020,765546,762004,44782742,44782747,762015,765541,44782748,44782752,762009,760876,765540,765922,762418,765537,44782767,46270071,762022,44782743,762021,762010,760877,762013,762018,762419,762005,44782745,44782744,762026,765156,44782421,764016,44782766,762048,45757410,762049,36712892,44782762,37109253,40478951,4042396,77310,4046884,4189004,4133004,4181315,45773536,763942,761980,443537,4133975,40480555,4322565,763941,761928,4207899,4028057,435565,40481089,4119760,4124856,4281689,4284538,4309333,46285905,46271900,4033521,4055089,4230403,4069561,761831,761830,761808,761832,761809,4221821,440750,4176614,761821,761819,761820,761818,4110339,4111868,4110343,439314,4109877,4112171,4112172,4250765,42538533,44811347,765049,4317289,4203836,4175649,4149782,4153353,46285904)
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4120091,45768439,45768888,4309039,762808,40480461,4108681,440417,37109911,37016922,43530605,254662,4253796,4121618,4119610,4236271,36713113,35615055,4119607)
 
 ) I
 ) C;
@@ -32,7 +39,22 @@ FROM
 (
   SELECT co.* 
   FROM @cdm_database_schema.CONDITION_OCCURRENCE co
-  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 9))
+  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 2))
+) C
+
+
+-- End Condition Occurrence Criteria
+
+UNION ALL
+-- Begin Condition Occurrence Criteria
+SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
+       C.CONDITION_CONCEPT_ID as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.condition_start_date as sort_date
+FROM 
+(
+  SELECT co.* 
+  FROM @cdm_database_schema.CONDITION_OCCURRENCE co
+  JOIN #Codesets codesets on ((co.condition_concept_id = codesets.concept_id and codesets.codeset_id = 3))
 ) C
 
 
@@ -85,7 +107,7 @@ FROM cteIncludedEvents Results
 -- date offset strategy
 
 select event_id, person_id, 
-  case when DATEADD(day,0,start_date) > start_date then DATEADD(day,0,start_date) else start_date end as end_date
+  case when DATEADD(day,1,end_date) > start_date then DATEADD(day,1,end_date) else start_date end as end_date
 INTO #strategy_ends
 from #included_events;
 

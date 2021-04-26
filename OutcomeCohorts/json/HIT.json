@@ -134,7 +134,7 @@
 		}
 	},
 	"AdditionalCriteria" : {
-		"Type" : "ALL",
+		"Type" : "ANY",
 		"CriteriaList" : [
 			{
 				"Criteria" : {
@@ -474,6 +474,108 @@
 							"DOMAIN_ID" : "Drug",
 							"VOCABULARY_ID" : "RxNorm Extension",
 							"CONCEPT_CLASS_ID" : "Marketed Product"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 43623979,
+							"CONCEPT_NAME" : "Dalteparin 12500 UNT/ML Injectable Solution",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "OMOP692915",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm Extension",
+							"CONCEPT_CLASS_ID" : "Clinical Drug"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40176348,
+							"CONCEPT_NAME" : "dalteparin sodium 25000 UNT/ML Injectable Solution",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "978777",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Clinical Drug"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40160948,
+							"CONCEPT_NAME" : "enoxaparin sodium 100 MG/ML Injectable Solution",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "854255",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Clinical Drug"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 19001019,
+							"CONCEPT_NAME" : "nadroparin 19000 UNT/ML Injectable Solution",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "415379",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Clinical Drug"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 19001016,
+							"CONCEPT_NAME" : "nadroparin 9500 UNT/ML Injectable Solution",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "251272",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Clinical Drug"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40180717,
+							"CONCEPT_NAME" : "tinzaparin sodium 20000 UNT/ML Injectable Solution",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "978713",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Clinical Drug"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : false,

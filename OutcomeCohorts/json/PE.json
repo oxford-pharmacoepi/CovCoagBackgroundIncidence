@@ -144,23 +144,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4091708,
-							"CONCEPT_NAME" : "Pulmonary air embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "280964006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 440417,
 							"CONCEPT_NAME" : "Pulmonary embolism",
 							"STANDARD_CONCEPT" : "S",
@@ -229,23 +212,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4119608,
-							"CONCEPT_NAME" : "Pulmonary fat embolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233938002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 254662,
 							"CONCEPT_NAME" : "Pulmonary infarction",
 							"STANDARD_CONCEPT" : "S",
@@ -270,23 +236,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "74315008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45766471,
-							"CONCEPT_NAME" : "Pulmonary oil microembolism",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "703636009",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -348,13 +297,13 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4119609,
-							"CONCEPT_NAME" : "Subacute pulmonary fat embolism",
+							"CONCEPT_ID" : 4236271,
+							"CONCEPT_NAME" : "Recurrent pulmonary embolism",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "233939005",
+							"CONCEPT_CODE" : "438773007",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -365,13 +314,30 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4236271,
-							"CONCEPT_NAME" : "Recurrent pulmonary embolism",
+							"CONCEPT_ID" : 36713113,
+							"CONCEPT_NAME" : "Saddle embolus of pulmonary artery",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "438773007",
+							"CONCEPT_CODE" : "328511000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 35615055,
+							"CONCEPT_NAME" : "Saddle embolus of pulmonary artery with acute cor pulmonale",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "15964701000119109",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"

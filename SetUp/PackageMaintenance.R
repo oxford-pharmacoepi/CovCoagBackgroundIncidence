@@ -1,4 +1,5 @@
-
+library(here)
+library(stringr)
 cohort.diag.path<-"/home/eburn/CovCoagOutcomeDiagnostics-main/diagCovCoagOutcomes"
 # path to the cohort diagnostics package
 

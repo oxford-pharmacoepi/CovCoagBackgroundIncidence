@@ -42,40 +42,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 46272950,
-							"CONCEPT_NAME" : "Thrombocytopathy, asplenia and miosis",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "711407000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 46271357,
-							"CONCEPT_NAME" : "Periodontitis co-occurrent with Chédiak-Higashi syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "709465004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 44782445,
 							"CONCEPT_NAME" : "Thrombocytopenia due to alcohol",
 							"STANDARD_CONCEPT" : "S",
@@ -151,193 +117,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "16623961000119100",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37204551,
-							"CONCEPT_NAME" : "Hereditary isolated aplastic anemia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "783255002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37204548,
-							"CONCEPT_NAME" : "Hereditary thrombocytopenia with normal platelets",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "783251006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37204520,
-							"CONCEPT_NAME" : "Bleeding diathesis due to thromboxane synthesis deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "783194008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37204478,
-							"CONCEPT_NAME" : "Pancytopenia due to IKZF1 mutations",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "783142006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37204236,
-							"CONCEPT_NAME" : "X-linked dyserythropoietic anemia with abnormal platelets and neutropenia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "782759001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37203819,
-							"CONCEPT_NAME" : "Bleeding diathesis due to collagen receptor defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "782934004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37117164,
-							"CONCEPT_NAME" : "Revesz syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "723512008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37116398,
-							"CONCEPT_NAME" : "Thyrocerebrorenal syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "733096007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37110834,
-							"CONCEPT_NAME" : "Defect of purinergic receptor p2y G protein-coupled 12",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "725291001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37110748,
-							"CONCEPT_NAME" : "Bleeding disorder due to calcium and DAG-regulated guanine exchange factor-1 deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "725105006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37110713,
-							"CONCEPT_NAME" : "Familial platelet syndrome with predisposition to acute myelogenous leukemia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "725034002",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -433,23 +212,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 37016797,
-							"CONCEPT_NAME" : "MYH9 related disease",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "712922002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 37016151,
 							"CONCEPT_NAME" : "Aplastic anemia caused by antineoplastic agent",
 							"STANDARD_CONCEPT" : "S",
@@ -467,23 +229,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 36717326,
-							"CONCEPT_NAME" : "DK phocomelia syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "719021005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 36716406,
 							"CONCEPT_NAME" : "Severe fever with thrombocytopenia syndrome virus",
 							"STANDARD_CONCEPT" : "S",
@@ -491,23 +236,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "722401001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36716047,
-							"CONCEPT_NAME" : "Radioulnar synostosis with amegakaryocytic thrombocytopenia syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "721882001",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -552,108 +280,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 36715053,
-							"CONCEPT_NAME" : "Autosomal dominant macrothrombocytopenia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "720521008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36715052,
-							"CONCEPT_NAME" : "Attenuated Chédiak-Higashi syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "720520009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36713970,
-							"CONCEPT_NAME" : "WT limb blood syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "719019000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36713636,
-							"CONCEPT_NAME" : "Medich giant platelet syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "718554005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36713635,
-							"CONCEPT_NAME" : "White platelet syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "718553004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36713443,
-							"CONCEPT_NAME" : "MYH9 macrothrombocytopenia syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "717769007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 36713112,
 							"CONCEPT_NAME" : "Pancytopenia due to antineoplastic chemotherapy",
 							"STANDARD_CONCEPT" : "S",
@@ -678,74 +304,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "771511005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36674972,
-							"CONCEPT_NAME" : "Macrothrombocytopenia with mitral valve insufficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "771075004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36674474,
-							"CONCEPT_NAME" : "Pancytopenia with developmental delay syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "774071007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 35625536,
-							"CONCEPT_NAME" : "Ataxia pancytopenia syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "768556005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 35623565,
-							"CONCEPT_NAME" : "Glycoprotein VI deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "765977002",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -841,23 +399,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4311682,
-							"CONCEPT_NAME" : "Radial aplasia-thrombocytopenia syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "85589009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4305588,
 							"CONCEPT_NAME" : "Doan-Wright syndrome",
 							"STANDARD_CONCEPT" : "S",
@@ -909,23 +450,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4300464,
-							"CONCEPT_NAME" : "Wiskott-Aldrich autosomal dominant variant syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "403837005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4299560,
 							"CONCEPT_NAME" : "Thrombocytopenic purpura due to defective platelet production",
 							"STANDARD_CONCEPT" : "S",
@@ -967,23 +491,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "402654005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4292425,
-							"CONCEPT_NAME" : "Sex-linked thrombocytopenia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "37492005",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1079,40 +586,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4246348,
-							"CONCEPT_NAME" : "Platelet dense granule deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "9417000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4245912,
-							"CONCEPT_NAME" : "Hermansky-Pudlak syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "9311003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4239484,
 							"CONCEPT_NAME" : "Acquired pancytopenia",
 							"STANDARD_CONCEPT" : "S",
@@ -1120,23 +593,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "5876000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4235220,
-							"CONCEPT_NAME" : "Hereditary thrombocytopenic disorder",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "438492008",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1334,40 +790,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4201288,
-							"CONCEPT_NAME" : "Platelet secretory disorder",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "51448009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4197685,
-							"CONCEPT_NAME" : "Gray platelet syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "51720005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4197574,
 							"CONCEPT_NAME" : "Dilutional thrombocytopenia",
 							"STANDARD_CONCEPT" : "S",
@@ -1402,23 +824,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4188208,
-							"CONCEPT_NAME" : "Estren-Dameshek anemia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "46760003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4186108,
 							"CONCEPT_NAME" : "Aplastic anemia associated with metabolic alteration",
 							"STANDARD_CONCEPT" : "S",
@@ -1426,23 +831,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "413565006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4185078,
-							"CONCEPT_NAME" : "Bernard Soulier syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "54569005",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1810,23 +1198,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4139942,
-							"CONCEPT_NAME" : "Glanzmann's thrombasthenia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "32942005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4139555,
 							"CONCEPT_NAME" : "Thrombocytopenia due to massive blood transfusion",
 							"STANDARD_CONCEPT" : "S",
@@ -1851,74 +1222,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "32273002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4134438,
-							"CONCEPT_NAME" : "Familial alpha>2< adrenergic receptor defect in platelets",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128102001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4134437,
-							"CONCEPT_NAME" : "Mixed alpha granule and dense body deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128100009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4134436,
-							"CONCEPT_NAME" : "Hereditary platelet function disorder",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128096008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4133985,
-							"CONCEPT_NAME" : "Isolated collagen aggregation defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128103006",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1997,23 +1300,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4125651,
-							"CONCEPT_NAME" : "Glycoprotein Ib defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234472008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4125496,
 							"CONCEPT_NAME" : "Pure red cell aplasia, acquired",
 							"STANDARD_CONCEPT" : "S",
@@ -2055,40 +1341,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "234512002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4123076,
-							"CONCEPT_NAME" : "Montreal platelet syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234486007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4123075,
-							"CONCEPT_NAME" : "May-Hegglin anomaly",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234484005",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -2225,108 +1477,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "234500001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120620,
-							"CONCEPT_NAME" : "Amegakaryocytic thrombocytopenia",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234482009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120619,
-							"CONCEPT_NAME" : "Thromboxane synthetase deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234477002",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120618,
-							"CONCEPT_NAME" : "Cyclooxygenase deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234476006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120617,
-							"CONCEPT_NAME" : "Thromboxane generation defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234475005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120616,
-							"CONCEPT_NAME" : "Glycoprotein Ia defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234471001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120615,
-							"CONCEPT_NAME" : "Platelet membrane defect",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "234470000",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -2643,23 +1793,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4027378,
-							"CONCEPT_NAME" : "Platelet factor V deficiency",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128101008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4027376,
 							"CONCEPT_NAME" : "Platelet storage pool defect",
 							"STANDARD_CONCEPT" : "S",
@@ -2667,23 +1800,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "128099001",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4027375,
-							"CONCEPT_NAME" : "Scott syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128098009",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -2728,23 +1844,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4006317,
-							"CONCEPT_NAME" : "Chédiak-Higashi syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "111396008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 4000065,
 							"CONCEPT_NAME" : "Drug-induced immune thrombocytopenia",
 							"STANDARD_CONCEPT" : "S",
@@ -2769,23 +1868,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "267534000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 440982,
-							"CONCEPT_NAME" : "Wiskott-Aldrich syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "36070007",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -2973,23 +2055,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "306058006",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37397537,
-							"CONCEPT_NAME" : "Beta thalassemia X-linked thrombocytopenia syndrome",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "718196002",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"

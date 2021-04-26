@@ -932,23 +932,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 45757410,
-							"CONCEPT_NAME" : "Acute thrombosis of mesenteric vein",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "133421000119101",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 762049,
 							"CONCEPT_NAME" : "Acute thrombosis of right subclavian vein",
 							"STANDARD_CONCEPT" : "S",
@@ -956,23 +939,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "286431000119103",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36712892,
-							"CONCEPT_NAME" : "Acute thrombosis of splenic vein",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "143561000119108",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1272,23 +1238,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 193512,
-							"CONCEPT_NAME" : "Embolism and thrombosis of the renal vein",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "195438008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 435565,
 							"CONCEPT_NAME" : "Embolism and thrombosis of the vena cava",
 							"STANDARD_CONCEPT" : "S",
@@ -1408,40 +1357,6 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4033521,
-							"CONCEPT_NAME" : "Splenic vein thrombosis",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "14534009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4055089,
-							"CONCEPT_NAME" : "Superior mesenteric vein thrombosis",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "197001004",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
 							"CONCEPT_ID" : 42538533,
 							"CONCEPT_NAME" : "Thrombosis of iliac vein",
 							"STANDARD_CONCEPT" : "S",
@@ -1483,23 +1398,6 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "16730001000004104",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4317289,
-							"CONCEPT_NAME" : "Thrombosis of mesenteric vein",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "95446005",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -1670,6 +1568,584 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "413956008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4042396,
+							"CONCEPT_NAME" : "Deep thrombophlebitis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16750002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 77310,
+							"CONCEPT_NAME" : "Deep vein phlebitis and thrombophlebitis of the leg",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "266267005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40481089,
+							"CONCEPT_NAME" : "Embolism from thrombosis of vein of lower extremity",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "444816006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4096099,
+							"CONCEPT_NAME" : "Phlebitis of deep veins of lower extremity",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "25114006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 440738,
+							"CONCEPT_NAME" : "Phlebitis of the femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195404000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4055089,
+							"CONCEPT_NAME" : "Superior mesenteric vein thrombosis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "197001004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 320741,
+							"CONCEPT_NAME" : "Thrombophlebitis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "64156001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 439838,
+							"CONCEPT_NAME" : "Thrombophlebitis migrans",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "31268005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4230403,
+							"CONCEPT_NAME" : "Thrombophlebitis of axillary vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "438646004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4069561,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1748006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761831,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of bilateral lower limbs",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16014391000119106",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761830,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of left lower limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16014351000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761808,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of left upper limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16006271000119105",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761832,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of right lower limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16014431000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761809,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep vein of right upper limb",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16006311000119105",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 440750,
+							"CONCEPT_NAME" : "Thrombophlebitis of deep veins of upper extremities",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "95452006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4176614,
+							"CONCEPT_NAME" : "Thrombophlebitis of iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "42861008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761821,
+							"CONCEPT_NAME" : "Thrombophlebitis of left deep femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16012151000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761819,
+							"CONCEPT_NAME" : "Thrombophlebitis of left femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16012071000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 444097,
+							"CONCEPT_NAME" : "Thrombophlebitis of lower extremities",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "46253008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761820,
+							"CONCEPT_NAME" : "Thrombophlebitis of right deep femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16012111000119108",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 761818,
+							"CONCEPT_NAME" : "Thrombophlebitis of right femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16011991000119109",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4110339,
+							"CONCEPT_NAME" : "Thrombophlebitis of the anterior tibial vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195412008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4111868,
+							"CONCEPT_NAME" : "Thrombophlebitis of the common iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195425000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4110343,
+							"CONCEPT_NAME" : "Thrombophlebitis of the external iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195427008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 439314,
+							"CONCEPT_NAME" : "Thrombophlebitis of the femoral vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195410000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4109877,
+							"CONCEPT_NAME" : "Thrombophlebitis of the internal iliac vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195426004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4112171,
+							"CONCEPT_NAME" : "Thrombophlebitis of the popliteal vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195411001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4112172,
+							"CONCEPT_NAME" : "Thrombophlebitis of the posterior tibial vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "195414009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4250765,
+							"CONCEPT_NAME" : "Thrombophlebitis of tibial vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "7387004",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4317289,
+							"CONCEPT_NAME" : "Thrombosis of mesenteric vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "95446005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4033521,
+							"CONCEPT_NAME" : "Splenic vein thrombosis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "14534009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36712892,
+							"CONCEPT_NAME" : "Acute thrombosis of splenic vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "143561000119108",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 45757410,
+							"CONCEPT_NAME" : "Acute thrombosis of mesenteric vein",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "133421000119101",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
