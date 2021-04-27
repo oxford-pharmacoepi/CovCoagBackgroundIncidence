@@ -1,9 +1,10 @@
 CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
 ========================================================================================================================================================
 
-<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Results Available"">
+<img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available">
+
 - Type: **Characterisation**
-- Results explorer: **[ShinyApp](https://livedataoxford.shinyapps.io/CovCoagOutcomesCohorts/)**
+- Results explorer: **[ShinyApp](https://livedataoxford.shinyapps.io/CovCoagBackgroundIncidence/)**
 - Protocol: ** **
 - Publications: ** **
 
