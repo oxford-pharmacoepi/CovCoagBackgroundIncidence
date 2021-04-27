@@ -96,6 +96,13 @@
       "Repository": "CRAN",
       "Hash": "e031418365a7f7a766181ab5a41a5716"
     },
+    "RPostgreSQL": {
+      "Package": "RPostgreSQL",
+      "Version": "0.6-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "82cb7737c081ed6b5e528a37f536d864"
+    },
     "RSQLite": {
       "Package": "RSQLite",
       "Version": "2.2.1",
