@@ -21,7 +21,7 @@ CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
 <li><i>results_database_schema <-"....."</i>: This is the name of the schema where a results table will be created </li> 
 <li><i>cohortDatabaseSchema <-"....."</i>: This is the name of the schema where a results table will be created </li>
 <li><i>cohortTableExposures<-"diagCovCoagIncExposures", cohortTableOutcomes <-"diagCovCoagIncOutcomes", cohortTableProfiles<-"diagCovCoagIncProfiles"</i>:  These are the tables to be created in your results schema for this analysis. Note, any existing tables in your results schema with the same name will be overwritten</li> 
-<li>db <- dbConnect("........."): This is a connection to your database with the <a href="https://rdrr.io/cran/DBI/man/dbConnect.html">DBI</a> package</li>  
+<li>db <- dbConnect("........."): This is a connection to your database with the <a href="https://rdrr.io/cran/DBI/man/dbConnect.html">DBI</a> package. Database specific information for how to create this connection can be found <a href="https://db.rstudio.com/databases">here</a> </li>  
 <li><i>db.name <-"....."</i>: This is the short name/ acronym for your database</li>  
 <li><i>test.run<-FALSE</i>: If you want to to quckly (well, relatively) check that the package works, set this to TRUE and the code will run for one exposure population, one baseline commorbidity, one baseline medication, and one outcome of interest. If that works, then change back to TRUE and re-run for the full analysis</li> 
 <li>After running you should then have a zip folder with results to share in your output folder. This contains three RData files, which contain aggregated statistics on patient characteristics and incidence rates.</li> 
