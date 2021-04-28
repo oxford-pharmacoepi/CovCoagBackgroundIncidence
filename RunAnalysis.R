@@ -1314,7 +1314,7 @@ IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.t
 
 # by age (thrid definition) and gender
 IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr3")]]<-working.Pop %>%  
-  group_by(age_gr3, gender) %>% 
+  group_by(age_gr3) %>% 
   summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
