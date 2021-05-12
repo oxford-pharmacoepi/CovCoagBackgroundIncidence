@@ -74,13 +74,13 @@ gg.general.format.facet<-function(plot){
   scale_y_continuous(label=label_comma(accuracy= 1), position = "right", limits=c(0,NA))+
   theme(panel.spacing = unit(0.6, "lines"),
         legend.title = element_blank(),
-        axis.text=element_text(size=14),
-        axis.title=element_text(size=14,face="bold"),
-        strip.text = element_text(size=14, face="bold"),
+        axis.text=element_text(size=12),
+        axis.title=element_text(size=12,face="bold"),
+        strip.text = element_text(size=12, face="bold"),
         strip.text.y.left = element_text(angle = 0),
         strip.background = element_rect( fill="#f7f7f7"),
       #  axis.title.y.right =  element_text(angle = 0),
-        legend.text=element_text(size=14), 
+        legend.text=element_text(size=12), 
         legend.position = "top") }
 
 gg.general.format.facet.perc<-function(plot){

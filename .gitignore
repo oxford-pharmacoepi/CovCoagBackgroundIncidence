@@ -40,3 +40,5 @@ output/Patient.characteristcis.for.plotting_IPCI.RData
 output/Patient.characteristcis.for.plotting_Italy LPD.RData
 output/Patient.characteristcis_IPCI.RData
 output/Patient.characteristcis_Italy LPD.RData
+SummariseResults/*
+output/*

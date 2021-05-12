@@ -766,8 +766,8 @@ if(str_detect(working.outcome.name, "(with thrombocytopenia 42 days pre to 14 da
   working.outcomes$dtime<-as.numeric(difftime(working.outcomes$thromb.date,
                                               working.outcomes$cohort_start_date, units="days"))
   working.outcomes<-working.outcomes %>% 
-    filter(dtime>=(-10)) %>% 
-    filter(dtime<=10)
+    filter(dtime>=(-42)) %>% 
+    filter(dtime<=14)
   
   working.outcomes<-working.outcomes %>% 
     select(-dtime) %>% 
