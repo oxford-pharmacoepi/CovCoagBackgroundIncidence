@@ -766,8 +766,8 @@ if(str_detect(working.outcome.name, "(with thrombocytopenia 42 days pre to 14 da
   working.outcomes$dtime<-as.numeric(difftime(working.outcomes$thromb.date,
                                               working.outcomes$cohort_start_date, units="days"))
   working.outcomes<-working.outcomes %>% 
-    filter(dtime>=(-10)) %>% 
-    filter(dtime<=10)
+    filter(dtime>=(-42)) %>% 
+    filter(dtime<=14)
   
   working.outcomes<-working.outcomes %>% 
     select(-dtime) %>% 
@@ -1314,7 +1314,7 @@ IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.t
 
 # by age (thrid definition) and gender
 IR.summary[[paste0(working.outcome.name,";",years.of.interest[i],";",o,";",pop.type,";","age_gr3")]]<-working.Pop %>%  
-  group_by(age_gr3, gender) %>% 
+  group_by(age_gr3) %>% 
   summarise(n=length(person_id),
             days=sum(f_u.outcome.days),
             years=(days/365.25),
