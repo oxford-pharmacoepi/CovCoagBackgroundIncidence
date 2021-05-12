@@ -1,4 +1,4 @@
-CovCoagBackgroundIncidence- Background incidence of coagulopathy outcomes
+Background incidence of coagulopathies, thromboembolic, rare embolic, and thrombosis with thrombocytopenia syndrome events of special interest for COVID-19 vaccine safety surveillance
 ========================================================================================================================================================
 
 <img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available">
