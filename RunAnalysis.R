@@ -87,18 +87,6 @@ drug.names<-c("antiinflamatory_and_antirheumatic",
                   "sex_hormones_modulators")
 # these are the medications we´ll extract for our table 1
 
-# simplify if running as test -----    
-if(test.run==TRUE){
-  years.of.interest<-years.of.interest[1]
-  exposure.pop.defs<-exposure.pop.defs[1]
-  cond.codes<-cond.codes[1]
-  cond.names<-cond.names[1]
-  drug.codes<-drug.codes[1]
-  drug.names<-drug.names[1]
-}   
- 
-    
-  
 # instantiate outcome tables -----
 cohort.sql<-list.files(here("OutcomeCohorts", "sql"))
 cohort.sql<-cohort.sql[cohort.sql!="CreateCohortTable.sql"]
@@ -106,11 +94,6 @@ outcome.cohorts<-tibble(id=1:length(cohort.sql),
                         file=cohort.sql,
                         name=str_replace(cohort.sql, ".sql", ""))  
 
-if(test.run==TRUE){
-outcome.cohorts<-outcome.cohorts %>%
-  filter(name=="all stroke")
-#this should be a cohort that everywhere has
-}
 
 if(create.outcome.cohorts=="FALSE"){
 print(paste0("- Skipping creating outcome cohorts"))
@@ -223,15 +206,17 @@ for(o in 1:length(prior.hist.req)){  # with and without requirement for year of 
 
 print(paste0("- Getting year: ", years.of.interest[i]))
 
-if(e==1){ 
+working.exposure.pop.def<- exposure.pop.defs[[e]]
+  
+if(working.exposure.pop.def==1){ 
 pop.type<-"general.pop.all"  
 # i.e. we go from the start of the year for all
   }
-if(e==2){ 
+if(working.exposure.pop.def==2){ 
 pop.type<-"general.pop.with.visit" 
 # here we go from the first observed visit
 }  
-if(e==3){ 
+if(working.exposure.pop.def==3){ 
 pop.type<-"general.pop.with.visit.28.days" 
 # here we go from the first observed visit, and then just follow up for 28 days
   } 
@@ -282,13 +267,13 @@ renderTranslateExecuteSql(conn=conn,
 rm(sql)
   
 if(working.year==2017){
-if(e==1){  
+if(working.exposure.pop.def==1){  
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_2017.sql"))
 }
-if(e %in% c(2,3) & years.of.interest[i]=="all"){  
+if(working.exposure.pop.def %in% c(2,3) & years.of.interest[i]=="all"){  
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2017_to_2019.sql"))  # to fix- max 2019
 }
-if(e %in% c(2,3) & years.of.interest[i]=="2017"){  
+if(working.exposure.pop.def %in% c(2,3) & years.of.interest[i]=="2017"){  
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2017_only.sql")) 
 }  
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
@@ -301,10 +286,10 @@ renderTranslateExecuteSql(conn=conn,
 }  
 
 if(working.year==2018){
-if(e==1){
+if(working.exposure.pop.def==1){
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_2018.sql")) 
 }
-if(e %in% c(2,3)){  
+if(working.exposure.pop.def %in% c(2,3)){  
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2018_only.sql")) 
 }
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
@@ -316,10 +301,10 @@ renderTranslateExecuteSql(conn=conn,
                           target_cohort_id = 1)  
 }  
 if(working.year==2019){
-if(e==1){
+if(working.exposure.pop.def==1){
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_2019.sql")) 
 }
-if(e %in% c(2,3)){  
+if(working.exposure.pop.def %in% c(2,3)){  
 sql<-readSql(here("ExposureCohorts", "sql","general_pop_visit_2019_only.sql")) 
 } 
 sql<-SqlRender::translate(sql, targetDialect = targetDialect)
@@ -811,7 +796,7 @@ working.Pop<-working.Pop %>%
 # where years.of.interest is "all", we want all four years of potential follow
 # where it is a specific year, just that year of follow up
 # see end.date defined above
-if(e==1 | e==2 ){
+if(working.exposure.pop.def==1 | working.exposure.pop.def==2 ){
 f_u.outcome<-working.outcomes %>%  
   inner_join(working.Pop %>% 
                select(person_id,cohort_start_date) %>% 
@@ -822,7 +807,7 @@ f_u.outcome<-working.outcomes %>%
 
 # where e==3
 # just up to 28 days 
-if(e==3){
+if(working.exposure.pop.def==3){
 f_u.outcome<-working.outcomes %>%  
   inner_join(working.Pop %>% 
                select(person_id,cohort_start_date) %>% 
@@ -854,7 +839,7 @@ working.Pop<-working.Pop %>%
 
 # if event, date of event
 # if no event,  censor at tar.end.date or end of observation period, whichever comes first
-if(e==1 | e==2 ){
+if(working.exposure.pop.def==1 | working.exposure.pop.def==2 ){
 working.Pop<-working.Pop %>%
   mutate(f_u.outcome_date=if_else(f_u.outcome==1,
                                   f_u.outcome_date, 
@@ -866,7 +851,7 @@ working.Pop<-working.Pop %>%
                                               working.start.date, 
                                                    units="days")))
 }
-if(e==3){
+if(working.exposure.pop.def==3){
 working.Pop<-working.Pop %>%
   mutate(f_u.outcome_date=if_else(f_u.outcome==1,
                                   f_u.outcome_date, 
@@ -875,7 +860,7 @@ working.Pop<-working.Pop %>%
                                        (cohort_start_date+days(28)) )))
 working.Pop<-working.Pop %>% 
   mutate(f_u.outcome.days=as.numeric(difftime(f_u.outcome_date,
-                                              working.start.date, 
+                                              cohort_start_date, 
                                                    units="days")))
 }
 
