@@ -58,13 +58,6 @@ db <- dbConnect("....")
 db.name<-"...."
 # This is the name/ acronym for your database (to be used in the titles of reports, etc) 
 
-test.run<-FALSE
-# if you want to to quckly (well, relatively) check that the package works
-# set test.run to TRUE
-# this will run for one exposure population, one baseline commorbidity, 
-# one baseline medication, and one outcome of interest
-# if that works, then change back to TRUE and re-run for the full analysis
-
 create.outcome.cohorts<-TRUE
 # if you have already created the outcome cohorts, you can set this to FALSE to skip instantiating these cohorts again
 
