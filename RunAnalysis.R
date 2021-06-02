@@ -706,12 +706,14 @@ if(working.outcome.name=="imm throm"){
     filter(cohort_definition_id %in% 
              ids) %>%
     select(subject_id, cohort_start_date) %>% 
-    collect()
+    collect() %>% 
+  mutate(cohort_start_date=as.Date(cohort_start_date)) 
 } else {
 working.outcomes<-outcome_db %>%
   filter(cohort_definition_id %in% working.outcome) %>%
   select(subject_id, cohort_start_date) %>% 
-  collect()
+  collect() %>% 
+  mutate(cohort_start_date=as.Date(cohort_start_date)) 
 }
 
 # thrombocytopenia window ----
@@ -728,8 +730,8 @@ if(str_detect(working.outcome.name, "(with thrombocytopenia 10 days pre to 10 da
   working.outcomes<-working.outcomes %>% 
     inner_join(thromb.outcomes)
   # find any outcomes with thrombocytopenia in the time window
-  working.outcomes$dtime<-as.numeric(difftime(working.outcomes$thromb.date,
-                                              working.outcomes$cohort_start_date, units="days"))
+  working.outcomes$dtime<-as.numeric(difftime(as.Date(working.outcomes$thromb.date),
+                                              as.Date(working.outcomes$cohort_start_date), units="days"))
   working.outcomes<-working.outcomes %>% 
     filter(dtime>=(-10)) %>% 
     filter(dtime<=10)
@@ -752,8 +754,8 @@ if(str_detect(working.outcome.name, "(with thrombocytopenia 42 days pre to 14 da
   working.outcomes<-working.outcomes %>% 
     inner_join(thromb.outcomes)
   # find any outcomes with thrombocytopenia in the time window
-  working.outcomes$dtime<-as.numeric(difftime(working.outcomes$thromb.date,
-                                              working.outcomes$cohort_start_date, units="days"))
+  working.outcomes$dtime<-as.numeric(difftime(as.Date(working.outcomes$thromb.date),
+                                              as.Date(working.outcomes$cohort_start_date), units="days"))
   working.outcomes<-working.outcomes %>% 
     filter(dtime>=(-42)) %>% 
     filter(dtime<=14)
@@ -770,8 +772,8 @@ washout.outcomes<-working.outcomes %>%
                select(person_id,cohort_start_date) %>% 
                rename("subject_id"="person_id") %>% 
                rename("Pop_cohort_start_date"="cohort_start_date")) %>% 
-  filter(cohort_start_date>= (Pop_cohort_start_date-years(1))) %>% 
-  filter(cohort_start_date<= Pop_cohort_start_date) 
+  filter(as.Date(cohort_start_date)>= (as.Date(Pop_cohort_start_date)-years(1))) %>% 
+  filter(as.Date(cohort_start_date)<= as.Date(Pop_cohort_start_date))  
 
 working.Pop<-working.Pop %>% 
   anti_join(washout.outcomes %>% 
@@ -785,7 +787,7 @@ history.outcomes<-working.outcomes %>%
                select(person_id,cohort_start_date) %>% 
                rename("subject_id"="person_id") %>% 
                rename("Pop_cohort_start_date"="cohort_start_date")) %>% 
-  filter(cohort_start_date< (Pop_cohort_start_date-years(1))) 
+  filter(as.Date(cohort_start_date)< (as.Date(Pop_cohort_start_date)-years(1))) 
 working.Pop<-working.Pop %>% 
   left_join(history.outcomes  %>% 
   select(subject_id) %>% 
@@ -806,8 +808,8 @@ f_u.outcome<-working.outcomes %>%
                select(person_id,cohort_start_date) %>% 
                rename("subject_id"="person_id") %>% 
                rename("Pop_cohort_start_date"="cohort_start_date"))  %>% 
-  filter(cohort_start_date> Pop_cohort_start_date) %>% 
-  filter(cohort_start_date<= end.date)}
+  filter(as.Date(cohort_start_date)> as.Date(Pop_cohort_start_date)) %>% 
+  filter(as.Date(cohort_start_date)<= end.date)}
 
 # where e==3
 # just up to 28 days 
@@ -817,8 +819,8 @@ f_u.outcome<-working.outcomes %>%
                select(person_id,cohort_start_date) %>% 
                rename("subject_id"="person_id") %>% 
                rename("Pop_cohort_start_date"="cohort_start_date"))  %>% 
-  filter(cohort_start_date> Pop_cohort_start_date) %>% 
-  filter(cohort_start_date<= (Pop_cohort_start_date+days(28)))
+  filter(as.Date(cohort_start_date)> as.Date(Pop_cohort_start_date)) %>% 
+  filter(as.Date(cohort_start_date)<= (as.Date(Pop_cohort_start_date)+days(28)))
 }
 
 
