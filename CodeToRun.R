@@ -40,6 +40,8 @@ targetDialect <-"...."
 
 cdm_database_schema<-"...." 
 # This is the name of the schema that contains the OMOP CDM with patient-level data
+vocabulary_database_schema<-"...." 
+# This is the name of the schema that contains the OMOP CDM vocbabulary
 
 results_database_schema<-"...."
 # This is the name of the schema where a results table will be created 
