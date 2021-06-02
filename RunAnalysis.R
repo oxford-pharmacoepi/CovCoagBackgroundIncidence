@@ -128,7 +128,7 @@ for(cohort.i in 1:length(outcome.cohorts$id)){
   renderTranslateExecuteSql(conn=conn, 
                           sql, 
                           cdm_database_schema = cdm_database_schema,
-                          vocabulary_database_schema = cdm_database_schema,
+                          vocabulary_database_schema = vocabulary_database_schema,
                           target_database_schema = results_database_schema,
                           # results_database_schema = results_database_schema,
                           target_cohort_table = cohortTableOutcomes,
@@ -330,7 +330,11 @@ Pop<-person_db %>%
             cohort_start_date) %>% 
   left_join(observation_period_db %>% 
      select("person_id",  "observation_period_start_date", "observation_period_end_date")) %>% 
-     collect()
+     collect() %>% 
+  mutate(cohort_start_date=as.Date(cohort_start_date)) %>% 
+  mutate(observation_period_start_date=as.Date(observation_period_start_date)) %>% 
+  mutate(observation_period_end_date=as.Date(observation_period_end_date)) 
+  
 
 # add age and gender -----
 Pop$age<- NA
@@ -528,10 +532,10 @@ med.persons <- drug_era_db %>%
          cohort_start_date) %>% 
   distinct() %>% 
   collect() %>%
-  filter(drug_era_start_date<=(cohort_start_date-days(4))
-          & drug_era_start_date>=(cohort_start_date-days(183)) |
-         drug_era_end_date<=(cohort_start_date-days(4))
-                 & drug_era_end_date>=(cohort_start_date-days(183))) %>% 
+  filter(as.Date(drug_era_start_date)<=(as.Date(cohort_start_date)-days(4))
+          & as.Date(drug_era_start_date)>=(as.Date(cohort_start_date)-days(183)) |
+         as.Date(drug_era_end_date)<=(as.Date(cohort_start_date)-days(4))
+                 & as.Date(drug_era_end_date)>=(as.Date(cohort_start_date)-days(183))) %>% 
   select(person_id, drug_id) %>% 
   distinct() 
 
@@ -1032,10 +1036,10 @@ med.persons <- outcome_db %>%
   select(person_id,drug_id, drug_era_start_date, drug_era_end_date, cohort_start_date) %>% 
   distinct() %>% 
   collect() %>%
-  filter(drug_era_start_date<=(cohort_start_date-days(4))
-          & drug_era_start_date>=(cohort_start_date-days(183)) |
-         drug_era_end_date<=(cohort_start_date-days(4))
-                 & drug_era_end_date>=(cohort_start_date-days(183))) %>% 
+  filter(as.Date(drug_era_start_date)<=(as.Date(cohort_start_date)-days(4))
+          & as.Date(drug_era_start_date)>=(as.Date(cohort_start_date)-days(183)) |
+         as.Date(drug_era_end_date)<=(as.Date(cohort_start_date)-days(4))
+                 & as.Date(drug_era_end_date)>=(as.Date(cohort_start_date)-days(183))) %>% 
   select(person_id, drug_id)%>% 
   distinct()
 
